@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "hostingstaging-4840a"
+  },
+  "targets": {
+    "hostingstaging-4840a": {
+      "hosting": {
+        "mexicotrasciendeitesm": [
+          "mexicotrasciendeitesm"
+        ]
+      }
+    }
+  }
+}

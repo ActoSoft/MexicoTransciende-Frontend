@@ -1,0 +1,75 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  tests:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: /home/circleci/project/
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
+
+      - run: yarn install
+
+      - save_cache:
+          name: Actosoft Frontend Gosen Cache
+          paths:
+            - ./
+          key: actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
+          when: on_success
+
+      # run tests!
+      - run: npm run lint
+
+  build_deploy:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: /home/circleci/project/
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
+            - actosoft-mexicotrasciende-npm-deps-
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          key: actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
+          paths:
+            - ./node-modules
+      - run:
+          name: CI to false
+          command: |
+            echo 'export CI=false' >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: React App Build
+          command: npm run build
+      - run:
+          name: "Firebase use default project"
+          command: npm run firebase-use
+      - run:
+          name: "Firebase target apply hotel cuellar"
+          command: npm run firebase-apply
+      - run:
+          name: Firebase Deploy
+          command: npm run deploy -- --token "$FIREBASE_TOKEN"
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - tests:
+          filters:
+            branches:
+              only: develop
+      - build_deploy:
+          context: Stating-Server
+          requires:
+            - tests

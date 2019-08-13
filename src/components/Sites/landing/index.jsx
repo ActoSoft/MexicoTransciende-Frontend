@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Landing = () => {
     return (
-        <React.Fragment>
+        <Fragment>
             <h1>Welcome to México Trasciende</h1>
-        </React.Fragment>
+        </Fragment>
     );
 };
 

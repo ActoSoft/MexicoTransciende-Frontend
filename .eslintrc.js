@@ -28,10 +28,6 @@ module.exports = {
             'error',
             4
         ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
         'quotes': [
             'error',
             'single'
@@ -50,6 +46,7 @@ module.exports = {
                 'after': true
             }
         ],
+        'linebreak-style': 0,
         'space-infix-ops': 'error',
         'no-mixed-spaces-and-tabs': 0,
         'no-cond-assign': [

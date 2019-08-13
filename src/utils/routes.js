@@ -1,2 +1,2 @@
 export const ROOT = '/'
-export const SPEAKERS = '/'
+export const SPEAKERS = '/speakers'

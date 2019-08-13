@@ -21,6 +21,12 @@
     "firebase-use": "./node_modules/.bin/firebase use default",
     "firebase-apply": "./node_modules/.bin/firebase target:apply hosting mexicotrasciendeitesm mexicotrasciendeitesm"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -37,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "firebase-tools": "^7.2.2"
+    "firebase-tools": "^7.2.2",
+    "husky": "^3.0.3"
   }
 }

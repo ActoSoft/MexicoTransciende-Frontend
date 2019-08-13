@@ -1,0 +1,56 @@
+$pink: #F48E9C;
+
+$yellow: #FA9E23;
+
+$red: #B13B3C;
+
+$white: #FFFDF5;
+
+$black: #000;
+
+$palette: (
+  pink: (
+    base: $pink,
+    light: lighten($pink, 15%),
+    dark: darken($pink, 15%),
+  ),
+  red: (
+    base: $red,
+    light: lighten($red, 15%),
+    dark: darken($red, 15%),
+  ),
+  yellow: (
+    base: $yellow,
+    light: lighten($yellow, 15%),
+    dark: darken($yellow, 15%),
+  ),
+  black: (
+    base: $black,
+    light: lighten($black, 15%),
+  ),
+  white: (
+    base: $white,
+    dark: darken($white, 15%),
+  )
+);
+
+@function color($color, $tone, $alpha: 1){
+
+  // @warn map-get($palette,$color);
+
+  @if map-has-key($palette,$color){
+    $color: map-get($palette,$color);
+
+      @if map-has-key($color,$tone){
+        $tone: map-get($color,$tone);
+        @return rgba($tone, $alpha);
+      }
+
+      @warn "unknown tone `#{$tone}` in color";
+      @return null;        
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+ 
+}

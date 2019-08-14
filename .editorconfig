@@ -1,0 +1,7 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+spaces_around_brackets = both
+end_of_line = lf

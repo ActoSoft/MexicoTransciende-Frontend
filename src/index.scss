@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
   background-image: linear-gradient(color(white, base), color(pink, base));
   background-repeat: no-repeat;
   min-height: 100vh;

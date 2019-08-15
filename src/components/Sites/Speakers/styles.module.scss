@@ -1,0 +1,94 @@
+@import '../../../partials/colors';
+
+.Speakers {
+    .header {
+        max-height: 40vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.SpeakerCard {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    background-color: color(white, base);
+    padding: 5px 25px 5px 45px;
+    margin: 25px 0;
+    border-radius: 0px 25px 25px 0;
+    position: relative;
+    box-shadow: 10px 10px 0px color(white, base, .3);
+    transform: translateX(-15px);
+    transition: .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    &.focus {
+        width: 275px;
+
+        .name {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &.opened {
+        width: 100vw;
+        height: 275px;
+        box-sizing: border-box;
+
+        .focusArea {
+            height: 75px;
+            grid-template-columns: calc((100% / 12) * 4) calc((100% / 12) * 8);
+
+        }
+
+        .name, .bio {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .focusArea {
+        height: 75px;
+        display: grid;
+        grid-template-columns: calc((275px / 12) * 4) calc((275px / 12) * 8);
+        justify-items: center;
+        align-items: center;
+        transition: .4s ease-in;
+
+        .imgCont {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+
+            img {
+                position: absolute;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+
+    .name, .bio {
+        visibility: hidden;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: color(pink, dark);
+        opacity: 0;
+        transition: .4s ease-in;
+    }
+
+    .bio {
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+}

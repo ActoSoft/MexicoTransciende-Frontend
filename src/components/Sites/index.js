@@ -1,3 +1,7 @@
+
 import Landing from './landing'
 import NavbarSidebar from './Navbar'
-export { Landing, NavbarSidebar }
+import Speakers from './Speakers'
+
+export { Landing, Speakers, NavbarSidebar }
+

@@ -12,7 +12,7 @@ $palette: (
   pink: (
     base: $pink,
     light: lighten($pink, 15%),
-    dark: darken($pink, 15%),
+    dark: desaturate(darken($pink, 15%), 15%),
   ),
   red: (
     base: $red,

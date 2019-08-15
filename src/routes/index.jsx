@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 // import PrivateRoute from './privateRoute'
-import { ROOT } from '../utils/routes'
-import { Landing } from '../components/Sites'
+import { ROOT, SPEAKERS } from '../utils/routes'
+import { Landing, Speakers } from '../components/Sites'
 
 const Routes = () =>
     <Fragment>
         <Switch>
-            <Route path={ROOT} component={ Landing } />
+            <Route exact path={ ROOT } component={ Landing } />
+            <Route exact path={ SPEAKERS } component={ Speakers } />
         </Switch>
     </Fragment>
 

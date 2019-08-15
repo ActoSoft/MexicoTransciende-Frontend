@@ -1,4 +1,3 @@
-import Landing from './Landing'
-import NavbarSidebar from './navbar-sidebar'
-
+import Landing from './landing'
+import NavbarSidebar from './Navbar'
 export { Landing, NavbarSidebar }

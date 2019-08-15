@@ -1,5 +1,5 @@
 
-import Landing from './landing'
+import Landing from './Landing'
 import NavbarSidebar from './Navbar'
 import Speakers from './Speakers'
 

@@ -116,7 +116,6 @@ const Speakers = () => {
 
     return(
         <div className={styles.Speakers} >
-            {/* onScroll={handleScroll} > */}
             <div className={styles.header} >
                 <img src="http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png" />
             </div>

@@ -1,3 +1,4 @@
 import Landing from './Landing'
+import Speakers from './Speakers'
 
-export { Landing }
+export { Landing, Speakers }

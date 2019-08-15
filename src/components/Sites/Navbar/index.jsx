@@ -16,12 +16,12 @@ const NavbarSidebar = () => {
                         onClick = { () => changeSidebar(false) }
                     />
                     <ul className = 'options-container' >
-                        <li>Inicio</li>
-                        <li>Acerca de</li>
-                        <li>Speakers</li>
-                        <li>Equipo Org.</li>
-                        <li>Patrocinadores</li>
-                        <li>Contacto</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Inicio</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Acerca de</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Speakers</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Equipo Org.</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Patrocinadores</li>
+                        <li className = "link" onClick = { () => changeSidebar(false) }>Contacto</li>
                     </ul>
                     <img src = { logo } alt='' className = 'logo-sidebar'/>
                 </div>

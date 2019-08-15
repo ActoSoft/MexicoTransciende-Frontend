@@ -41,10 +41,15 @@
             padding: 0;
             margin: 0;
             list-style: none;
-            li{
+            .link{
                 color: #ba484a;
                 font-size: 1.5em;
                 margin: 5vh 30px;
+                transition: 0.3s;
+                &:active{
+                    transform: translateX(15px);
+                    opacity: 0.7;
+                }
             }
         }
         .logo-sidebar{
@@ -64,7 +69,9 @@
             justify-content: space-around;
             height: 10vh;
             img{
-                height: 8vh;
+                &:nth-child(2){
+                    height: 10vh;
+                }
                 &:nth-child(1), &:nth-child(3){
                     height: 5vh;
                 }

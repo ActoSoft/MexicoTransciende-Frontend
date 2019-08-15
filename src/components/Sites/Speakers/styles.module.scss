@@ -44,7 +44,7 @@
 
         .focusArea {
             height: 75px;
-            grid-template-columns: calc((100vw / 12) * 4) calc((100vw / 12) * 8);
+            grid-template-columns: calc((100% / 12) * 4) calc((100% / 12) * 8);
 
         }
 

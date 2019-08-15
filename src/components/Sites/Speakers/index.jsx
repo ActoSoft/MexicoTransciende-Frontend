@@ -70,7 +70,8 @@ const Speakers = () => {
         },
         {
             name: 'Jaime Lannister',
-            avatar: 'https://pm1.narvii.com/6688/6a0f013b07eb920c47e05d0431624d2e2c6cfcd4_128.jpg'
+            avatar: 'https://pm1.narvii.com/6688/6a0f013b07eb920c47e05d0431624d2e2c6cfcd4_128.jpg',
+            bio: 'Lorem ipsum dolor amet butcher meggings humblebrag green juice umami leggings paleo iPhone seitan marfa man braid mlkshk you probably havent heard of them pug stumptown. '
         }
     ]
 

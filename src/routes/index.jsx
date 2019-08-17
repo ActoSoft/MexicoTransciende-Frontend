@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 // import PrivateRoute from './privateRoute'
 import { ROOT, SPEAKERS } from '../utils/routes'
-import { Landing, Speakers, AboutUs } from '../components/Sites'
+import { Speakers, AboutUs } from '../components/Sites'
 
 const Routes = () =>
     <Fragment>

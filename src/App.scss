@@ -57,25 +57,25 @@
             width: 20vw;
         }
     }
-    .the-other-content{
-        background-image: linear-gradient(to bottom, #fff, #ba484a);
-        height: 100vh;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        header{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            height: 10vh;
-            img{
-                &:nth-child(2){
-                    height: 10vh;
-                }
-                &:nth-child(1), &:nth-child(3){
-                    height: 5vh;
-                }
-            }
-        }
-    }
+    // .the-other-content{
+    //     background-image: linear-gradient(to bottom, #fff, #ba484a);
+    //     height: 100vh;
+    //     background-attachment: fixed;
+    //     background-size: 100% 100%;
+    //     background-repeat: no-repeat;
+    //     header{
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-around;
+    //         height: 10vh;
+    //         img{
+    //             &:nth-child(2){
+    //                 height: 10vh;
+    //             }
+    //             &:nth-child(1), &:nth-child(3){
+    //                 height: 5vh;
+    //             }
+    //         }
+    //     }
+    // }
 }

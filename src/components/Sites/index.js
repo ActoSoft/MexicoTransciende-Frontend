@@ -1,5 +1,5 @@
 import Landing from './Landing'
 import Speakers from './Speakers'
 import AboutUs from './about'
-
-export { Landing, Speakers, AboutUs }
+import NavbarSidebar from './Navbar'
+export { Landing, Speakers, AboutUs, NavbarSidebar }

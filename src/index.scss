@@ -10,6 +10,7 @@ body {
   background-image: linear-gradient(color(white, base), color(pink, base));
   background-repeat: no-repeat;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 code {

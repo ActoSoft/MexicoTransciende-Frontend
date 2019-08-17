@@ -49,19 +49,20 @@ const SpeakerCard = ({ name, avatar, bio, y, visibility, setVisible, id, ...prop
     }, [visibility, y])
 
     return(
-        <div {...props}
-            className={[styles.SpeakerCard, styles[state]].join(' ')}
-            onClick={handleClick}
-            ref={ref} >
-            <div className={styles.focusArea} >
-                <div className={styles.imgCont} >
-                    <img src={avatar} />
+        <div { ...props }
+            className = { [styles.SpeakerCard, styles[state]].join(' ') }
+            onClick = { handleClick }
+            ref = { ref }
+        >
+            <div className = { styles.focusArea } >
+                <div className = { styles.imgCont } >
+                    <img src = { avatar } />
                 </div>
-                <p className={styles.name} >
+                <p className = { styles.name } >
                     {name}
                 </p>
             </div>
-            <p className={styles.bio} >
+            <p className = { styles.bio } >
                 {bio ? bio.slice(0, 100) + '...' : bio}
             </p>
         </div>
@@ -115,14 +116,20 @@ const Speakers = () => {
     }, [])
 
     return(
-        <div className={styles.Speakers} >
-            <div className={styles.header} >
-                <img src="http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png" />
+        <div className = { styles.Speakers } >
+            <div className = { styles.header } >
+                <img src = 'http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png' />
             </div>
 
             {
                 speakers.map((speaker, i) =>
-                    <SpeakerCard setVisible={setVisible} visibility={visibile.id === i ? 'focus' : 'normal'} key={i} y={y} id={i} {...speaker} />
+                    <SpeakerCard setVisible = { setVisible }
+                        visibility = { visibile.id === i ? 'focus' : 'normal' }
+                        key = { i }
+                        y = { y }
+                        id = { i }
+                        { ...speaker }
+                    />
                 )
             }
         </div>

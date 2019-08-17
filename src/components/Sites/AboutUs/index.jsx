@@ -14,7 +14,6 @@ class AboutUs extends Component {
     render() {
 	    return (
 	        <div className="ui-about-container">
-                <div className="ui-img"></div>
                 <div className="ui-about-content-text">
                     <div className="ui-about-text">
                         <label className="ui-about-text-tittle">{this.state.about}</label>

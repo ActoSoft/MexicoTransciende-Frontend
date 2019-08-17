@@ -1,11 +1,7 @@
 .ui-about-container{
     width: 100vw;
     min-width: 100vw;
-}
-.ui-img {
-    width: 100vw;
-    height: 22vh;
-    background-color: black;
+    margin-top: 10vh;
 }
 
 .ui-about-content-text {
@@ -42,7 +38,8 @@ box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
     display: block;
     text-align: center;
     font-size: 15px;
-} 
+    text-align: justify;
+}
 
 @media screen and (max-width: 768px){
     .ui-about-container{
@@ -54,7 +51,7 @@ box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
         height: 22vh;
         background-color: black;
     }
-    
+
     .ui-about-content-text {
         width: 70vw;
         height: 60vh;
@@ -75,7 +72,7 @@ box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
     .ui-about-text{
         width: 60vw;
     }
-    
+
     .ui-about-text-tittle{
         color: #fff;
         text-transform: uppercase;
@@ -88,6 +85,7 @@ box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
         color: #fff;
         display: block;
         text-align: center;
+        text-align: justify;
         font-size: 15px;
     }
 }

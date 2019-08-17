@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react'
-import logo from '../../../images/logo-transparency-square.png'
+import logo from '../../../images/logo-transparency.png'
 import cross from '../../../images/icons/multiply.svg'
-import menu from '../../../images/icons/menu.svg'
-import user from '../../../images/icons/user.svg'
+import user from '../../../images/user.svg'
+import './index.scss'
+// import Navbar from '../../mobile/navbar'
 
 const NavbarSidebar = () => {
 
@@ -11,7 +12,7 @@ const NavbarSidebar = () => {
     return(
         <Fragment>
             <div className = {`App ${openSidebar ? 'right-move' : 'left-move'}`}>
-                <div className = {`side-bar ${openSidebar ? 'side-visible' : 'side-hidde'}`}>
+                <div className = {`side-bar ${openSidebar ? 'side-visible' : 'side-hidden'}`}>
                     <img src = { cross } alt = '' className = 'cross'
                         onClick = { () => changeSidebar(false) }
                     />
@@ -25,15 +26,16 @@ const NavbarSidebar = () => {
                     </ul>
                     <img src = { logo } alt='' className = 'logo-sidebar'/>
                 </div>
-                <div className = 'the-other-content'>
-                    <header>
-                        <img src = { menu } alt=''
-                            onClick = { () => changeSidebar(true) }
-                        />
-                        <img src = { logo } alt=''/>
-                        <img src = { user } alt=''/>
-                    </header>
+                <div className="ui-navbar">
+                    <div className="ui-hamburger-menu" onClick={() => changeSidebar(true)}>
+                        <div className="line"></div>
+                        <div className="line-large"></div>
+                        <div className="line"></div>
+                    </div>
+                    <img src={logo} alt="User" className="img-icon"/>
+                    <img src={user} alt="User" className="img-nav"/>
                 </div>
+                {/* <Navbar changeSidebar={changeSidebar}/> */}
             </div>
         </Fragment>
     )

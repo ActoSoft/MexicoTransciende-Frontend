@@ -35,10 +35,6 @@ const SpeakerCard = ({ name, avatar, bio, y, visibility, setVisible, id, ...prop
         const top = middle - 35
         const bot = middle + 35
 
-        // console.log('*******ID', id)
-        // console.log('middle', middle, 'top', top, 'bot', bot)
-        // console.log('Y', parseInt(y), )
-        // console.log('calc', y <= bot && y >= top)
         if(y <= bot && y >= top) {
             if(state === 'normal') {
                 window.scrollTo(0, ref.current.offsetTop - window.innerHeight / 2)
@@ -119,6 +115,8 @@ const Speakers = () => {
             <div className={styles.header} >
                 <img src="http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png" />
             </div>
+
+            <h3 className="subtitle">Speakers</h3>
 
             {
                 speakers.map((speaker, i) =>

@@ -117,7 +117,7 @@ const Speakers = () => {
                 <img src = 'http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png' />
             </div>
 
-            <h3 className="subtitle">Speakers</h3>
+            <h3 className = 'subtitle'>Speakers</h3>
 
             {
                 speakers.map((speaker, i) =>

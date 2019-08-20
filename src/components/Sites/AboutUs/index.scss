@@ -40,8 +40,8 @@
     color: #fff;
     display: block;
     text-align: center;
-    font-size: 24px;
-} 
+    font-size: 24px !important;
+}
 
 @media screen and (max-width: 768px){
     .ui-about-container{
@@ -54,7 +54,7 @@
         height: 22vh;
         background-color: black;
     }
-    
+
     .ui-about-content-text {
         width: 70vw;
         height: 60vh;
@@ -75,7 +75,7 @@
     .ui-about-text{
         width: 60vw;
     }
-    
+
     .ui-about-text-tittle{
         color: #fff;
         text-transform: uppercase;

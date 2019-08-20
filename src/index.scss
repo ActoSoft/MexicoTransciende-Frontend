@@ -9,7 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(color(white, base), color(pink, base));
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
 
 code {

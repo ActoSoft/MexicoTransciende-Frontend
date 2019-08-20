@@ -1,33 +1,81 @@
-.App {
-  text-align: center;
-}
+.App{
+    width: 100%;
+    transition: 0.3s;
+    &.right-move{
+        position: absolute;
+        left: 70vw;
+        top: 0;
+    }
+    &.left-move{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .side-bar{
+        &.side-visible{
+            left: 0%;
+            top: 0%;
+        }
+        &.side-hidden{
+            left: -70vw;
+            top: 0%;
+        }
+        transition: 0.3s;
+        position: fixed;
+        width: 70vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        background: #fff;
+        position: fixed;
+        .cross{
+            width: 3vh;
+            margin: 20px;
+        }
+        ul{
+            width: 100%;
+            height: 80vh;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            .link{
+                color: #ba484a;
+                font-size: 1.5em;
+                margin: 5vh 30px;
+                transition: 0.3s;
+                &:active{
+                    transform: translateX(15px);
+                    opacity: 0.7;
+                }
+            }
+        }
+        .logo-sidebar{
+            margin: auto;
+            width: 20vw;
+        }
+    }
+    // .the-other-content{
+    //     background-image: linear-gradient(to bottom, #fff, #ba484a);
+    //     height: 100vh;
+    //     background-attachment: fixed;
+    //     background-size: 100% 100%;
+    //     background-repeat: no-repeat;
+    //     header{
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-around;
+    //         height: 10vh;
+    //         img{
+    //             &:nth-child(2){
+    //                 height: 10vh;
+    //             }
+    //             &:nth-child(1), &:nth-child(3){
+    //                 height: 5vh;
+    //             }
+    //         }
+    //     }
+    // }
 }

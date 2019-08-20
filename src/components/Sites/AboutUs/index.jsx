@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './index.scss'
 
-class Navbar extends Component {
+class AboutUs extends Component {
 
     constructor(props) {
         super(props)
@@ -14,7 +14,6 @@ class Navbar extends Component {
     render() {
 	    return (
 	        <div className="ui-about-container">
-                <div className="ui-img"></div>
                 <div className="ui-about-content-text">
                     <div className="ui-about-text">
                         <label className="ui-about-text-tittle">{this.state.about}</label>
@@ -26,4 +25,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar 
+export default AboutUs

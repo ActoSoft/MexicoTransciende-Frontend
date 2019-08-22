@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import Time from './Time'
 import './index.scss'
 
 class CountDown extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            finalDate: new Date('2019-11-15').getTime(),
+            finalDate: new Date('2019-11-15')
+                .getTime(),
             days: null,
             hours: null,
             minutes: null,
@@ -15,19 +17,32 @@ class CountDown extends Component {
 
     componentDidMount = () => {
         setInterval(() => {
-            const now = new Date().getTime()
-            const time = this.state.finalDate - now
             let {
                 days,
                 hours,
                 minutes,
-                seconds
+                seconds,
+                finalDate
             } = this.state
-            days = Math.floor(time / (1000 * 60 * 60 * 24))
-            hours = Math.floor(time % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
-            minutes = Math.floor(time % (1000 * 60 * 60) / (1000 * 60))
-            seconds = Math.floor(time % (1000 * 60) / 1000)
-            this.setState({ days, hours, minutes, seconds })
+
+            const now = new Date().getTime()
+            const time = finalDate - now
+
+            const daysOp = 1000 * 60 * 60 * 24
+            const hoursOp = 1000 * 60 * 60
+            const minutesOp = 1000 * 60
+            const secondsOp = 1000
+
+            days = Math.floor(time / daysOp)
+            hours = Math.floor(time % daysOp / hoursOp)
+            minutes = Math.floor(time % hoursOp / minutesOp)
+            seconds = Math.floor(time % minutesOp / secondsOp)
+            this.setState({
+                days,
+                hours,
+                minutes,
+                seconds
+            })
         }, 1000)
     }
     render() {
@@ -37,39 +52,30 @@ class CountDown extends Component {
             minutes,
             seconds
         } = this.state
+
+        const times = [
+            { time: days, label: 'DÍAS' },
+            { time: hours, label: 'HORAS' },
+            { time: minutes, label: 'MINUTOS' },
+            { time: seconds, label: 'SEGUNDOS' }
+        ]
         return (
             <div className = 'countdown-container'>
-                <div className = 'time-containers'>
-                    <div className = 'single-number'>
-                        {days > 9 ? days.toString()[0] : '0' }
-                    </div>
-                    <div className = 'single-number'>
-                        {days > 9 ? days.toString()[1] : days }
-                    </div>
+                <div className = 'text'>
+                    <p>¿Estás listo para el evento?</p>
+                    <p className = 'mayus'> SOLO FALTA ...</p>
                 </div>
-                <div className = 'time-containers'>
-                    <div className = 'single-number'>
-                        {hours > 9 ? hours.toString()[0] : '0' }
-                    </div>
-                    <div className = 'single-number'>
-                        {hours > 9 ? hours.toString()[1] : hours }
-                    </div>
-                </div>
-                <div className = 'time-containers'>
-                    <div className = 'single-number'>
-                        {minutes > 9 ? minutes.toString()[0] : '0' }
-                    </div>
-                    <div className = 'single-number'>
-                        {minutes > 9 ? minutes.toString()[1] : minutes }
-                    </div>
-                </div>
-                <div className = 'time-containers'>
-                    <div className = 'single-number'>
-                        {seconds > 9 ? seconds.toString()[0] : '0' }
-                    </div>
-                    <div className = 'single-number'>
-                        {seconds > 9 ? seconds.toString()[1] : seconds }
-                    </div>
+                <div className = 'countdown'>
+                    { times.map((value, index) => {
+                        const { time, label } = value
+                        return (
+                            <Time
+                                key = { index }
+                                time = { time }
+                                label = { label }
+                            />
+                        )
+                    })}
                 </div>
             </div>
         )

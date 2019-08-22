@@ -3,6 +3,7 @@ import logo from '../../../images/logo-transparency-square.png'
 import cross from '../../../images/icons/multiply.svg'
 import menu from '../../../images/icons/menu.svg'
 import user from '../../../images/icons/user.svg'
+import './index.scss'
 
 class NavbarSidebar extends Component {
 
@@ -10,29 +11,29 @@ class NavbarSidebar extends Component {
         super(props)
         this.state = {
             sidebarOpen: false,
-            navbarBackground: false
+            // navbarBackground: true
         }
     }
 
-    changePosition = () => {
-        let { scrollY, innerHeight } = window
-        let { navbarBackground } = this.state
-        if(scrollY > innerHeight && !navbarBackground) {
-            this.setState({ navbarBackground: true })
-        }
+    // changePosition = () => {
+    //     let { scrollY, innerHeight } = window
+    //     let { navbarBackground } = this.state
+    //     if(scrollY > innerHeight && !navbarBackground) {
+    //         this.setState({ navbarBackground: true })
+    //     }
 
-        if(scrollY < innerHeight && navbarBackground) {
-            this.setState({ navbarBackground: false })
-        }
-    }
+    //     if(scrollY < innerHeight && navbarBackground) {
+    //         this.setState({ navbarBackground: false })
+    //     }
+    // }
 
-    componentDidMount = () => {
-        window.addEventListener('scroll', this.changePosition)
-    }
+    // componentDidMount = () => {
+    //     window.addEventListener('scroll', this.changePosition)
+    // }
 
-    componentWillUnmount = () => {
-        window.removeEventListener('scroll', this.changePosition)
-    }
+    // componentWillUnmount = () => {
+    //     window.removeEventListener('scroll', this.changePosition)
+    // }
 
     changeSidebar = value => {
         this.setState({ sidebarOpen: value })
@@ -57,11 +58,7 @@ class NavbarSidebar extends Component {
                         <img src = { logo } alt = '' className = 'logo-sidebar'/>
                     </div>
                     <div className = 'the-other-content'>
-                        <header
-                            style = {{
-                                backgroundColor: this.state.navbarBackground ? '#fff' : 'transparent'
-                            }}
-                        >
+                        <header>
                             <img src = { menu } alt = ''
                                 onClick = { () => this.changeSidebar(true) }
                             />

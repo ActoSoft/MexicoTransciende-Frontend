@@ -19,7 +19,7 @@ class InfoEvent extends Component {
 
     render() {
 	    return (
-	        <div className="ui-info-container">
+	        <div>
                 <div className="ui-info-container">
                     <div className="ui-info-content">
                         <img src={Location} className="ui-info-icon" alt="Lugar" />

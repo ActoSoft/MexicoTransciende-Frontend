@@ -2,8 +2,11 @@
     background-color: #fFF;
     max-width: 100vw;
     min-width: 100vw;
-    height: 30vh;
-    border-radius: 80px 10px 80px 10px;
+    height: 25vh;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

@@ -1,15 +1,58 @@
-.App{
+.Navbar{
     width: 100%;
-    transition: 0.3s;
+    overflow-x: hidden;
     &.right-move{
-        position: absolute;
-        left: 70vw;
-        top: 0;
+        &+ div {
+            position: fixed;
+            left: 70vw;
+            top: 0;
+            transition: 0.3s;
+            overflow-x: hidden;
+        }
+        header{
+            left: 70vw;
+        }
     }
     &.left-move{
-        position: absolute;
-        left: 0;
+        &+ div {
+            left: 0vw;
+            animation: back-position 0.3s;
+            @keyframes back-position {
+                from {
+                    position: fixed;
+                    left: 70vw;
+                    top: 0;
+                } to {
+                    position: fixed;
+                    left: 0vw;
+                    top: 0;
+                }
+            }
+        }
+        header{
+            left: 0vw;
+        }
+    }
+    header{
+        width: 100vw;
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        position: fixed;
         top: 0;
+        left: 0;
+        z-index: 1000;
+        transition: 0.3s;
+        justify-content: space-around;
+        height: 10vh;
+        img{
+            &:nth-child(2){
+                height: 10vh;
+            }
+            &:nth-child(1), &:nth-child(3){
+                height: 5vh;
+            }
+        }
     }
 
     .side-bar{
@@ -55,30 +98,6 @@
         .logo-sidebar{
             margin: auto;
             width: 20vw;
-        }
-    }
-    .the-other-content{
-        //background-image: linear-gradient(to bottom, #fff, #ba484a);
-        height: 100vh;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        header{
-            width: 100%;
-            display: flex;
-            background-color: #fff;
-            align-items: center;
-            position: fixed;
-            justify-content: space-around;
-            height: 10vh;
-            img{
-                &:nth-child(2){
-                    height: 10vh;
-                }
-                &:nth-child(1), &:nth-child(3){
-                    height: 5vh;
-                }
-            }
         }
     }
 }

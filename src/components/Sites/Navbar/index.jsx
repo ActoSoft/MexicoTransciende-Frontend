@@ -42,7 +42,7 @@ class NavbarSidebar extends Component {
     render() {
         return(
             <Fragment>
-                <div className = { `App ${this.state.sidebarOpen ? 'right-move' : 'left-move'}` }>
+                <div className = { `Navbar ${this.state.sidebarOpen ? 'right-move' : 'left-move'}` }>
                     <div className = { `side-bar ${this.state.sidebarOpen ? 'side-visible' : 'side-hidde'}` }>
                         <img src = { cross } alt = '' className = 'cross'
                             onClick = { () => this.changeSidebar(false) }
@@ -57,15 +57,13 @@ class NavbarSidebar extends Component {
                         </ul>
                         <img src = { logo } alt = '' className = 'logo-sidebar'/>
                     </div>
-                    <div className = 'the-other-content'>
-                        <header>
-                            <img src = { menu } alt = ''
-                                onClick = { () => this.changeSidebar(true) }
-                            />
-                            <img src = { logo } alt = ''/>
-                            <img src = { user } alt = ''/>
-                        </header>
-                    </div>
+                    <header>
+                        <img src = { menu } alt = ''
+                            onClick = { () => this.changeSidebar(true) }
+                        />
+                        <img src = { logo } alt = ''/>
+                        <img src = { user } alt = ''/>
+                    </header>
                 </div>
             </Fragment>
         )

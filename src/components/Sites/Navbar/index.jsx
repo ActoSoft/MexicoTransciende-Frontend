@@ -66,7 +66,8 @@ class NavbarSidebar extends Component {
                     </header>
                     <div
                         className = { `black-div ${ this.state.sidebarOpen ? 'visible-div' : 'hidden-div' }` }
-                        onClick = { () => this.changeSidebar(false) } ></div>
+                        onClick = { () => this.changeSidebar(false) }
+                    />
                 </div>
             </Fragment>
         )

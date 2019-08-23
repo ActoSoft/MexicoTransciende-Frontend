@@ -63,7 +63,7 @@ class CountDown extends Component {
             <div className = 'countdown-container'>
                 <div className = 'text'>
                     <p>¿Estás listo para el evento?</p>
-                    <p className = 'mayus'> SOLO FALTA ...</p>
+                    <p className = 'mayus'> SÓLO FALTA ...</p>
                 </div>
                 <div className = 'countdown'>
                     { times.map((value, index) => {

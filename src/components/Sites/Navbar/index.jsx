@@ -65,8 +65,8 @@ class NavbarSidebar extends Component {
                         <img src = { user } alt = ''/>
                     </header>
                     <div
-                    className = {`black-div ${ this.state.sidebarOpen ? "visible-div" : "hidden-div" }`}
-                    onClick = { () => this.changeSidebar(false) } />
+                        className = { `black-div ${ this.state.sidebarOpen ? 'visible-div' : 'hidden-div' }` }
+                        onClick = { () => this.changeSidebar(false) } ></div>
                 </div>
             </Fragment>
         )

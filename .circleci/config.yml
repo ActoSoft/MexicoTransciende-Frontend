@@ -26,10 +26,6 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - save_cache:
-          key: actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
-          paths:
-            - ./node-modules
       - run:
           name: CI to false
           command: |

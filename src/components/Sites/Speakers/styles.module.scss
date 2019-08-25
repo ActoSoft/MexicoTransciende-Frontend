@@ -1,18 +1,6 @@
 @import '../../../partials/colors';
 
 .Speakers {
-    padding-top: 50vh;
-    height: 250vh;
-    .header {
-        max-height: 40vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 100%;
-        }
-    }
 }
 
 .SpeakerCard {

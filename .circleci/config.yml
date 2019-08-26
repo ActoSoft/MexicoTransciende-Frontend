@@ -11,18 +11,8 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
 
       - run: yarn install
-
-      - save_cache:
-          name: Actosoft Frontend Gosen Cache
-          paths:
-            - ./
-          key: actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
-          when: on_success
 
       # run tests!
       - run: npm run lint
@@ -33,17 +23,9 @@ jobs:
     working_directory: /home/circleci/project/
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
-            - actosoft-mexicotrasciende-npm-deps-
       - run:
           name: Install dependencies
           command: npm install
-      - save_cache:
-          key: actosoft-mexicotrasciende-npm-deps-{{ checksum "package.json" }}
-          paths:
-            - ./node-modules
       - run:
           name: CI to false
           command: |

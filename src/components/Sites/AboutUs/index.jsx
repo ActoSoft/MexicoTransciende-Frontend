@@ -13,11 +13,11 @@ class AboutUs extends Component {
 
     render() {
 	    return (
-	        <div className="ui-about-container">
-                <div className="ui-about-content-text">
-                    <div className="ui-about-text">
-                        <label className="ui-about-text-tittle">{this.state.about}</label>
-                        <label className="ui-about-text-content">{this.state.content}</label>
+	        <div className = 'ui-about-container'>
+                <div className = 'ui-about-content-text'>
+                    <div className = 'ui-about-text'>
+                        <label className = 'ui-about-text-tittle'>{this.state.about}</label>
+                        <label className = 'ui-about-text-content'>{this.state.content}</label>
                     </div>
                 </div>
             </div>

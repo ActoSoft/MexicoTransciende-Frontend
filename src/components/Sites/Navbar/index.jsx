@@ -15,6 +15,22 @@ class NavbarSidebar extends Component {
         }
     }
 
+    componentDidMount = ( ) => {
+        window.addEventListener('scroll', () => {
+            let nav = document.getElementsByClassName('desktop-version')[0]
+            if( window.scrollY >= window.innerHeight ){
+                nav.style.position = 'fixed'
+                nav.style.backgroundColor = '#fdf0eb'
+                nav.style.animation = 'side-down 0.2s'
+            }
+            else{
+                nav.style.position = 'absolute'
+                nav.style.animation = 'side-up 0.2s'
+                nav.style.backgroundColor = '#0000'
+            }
+        })
+    }
+
     // changePosition = () => {
     //     let { scrollY, innerHeight } = window
     //     let { navbarBackground } = this.state
@@ -31,9 +47,9 @@ class NavbarSidebar extends Component {
     //     window.addEventListener('scroll', this.changePosition)
     // }
 
-    // componentWillUnmount = () => {
-    //     window.removeEventListener('scroll', this.changePosition)
-    // }
+    componentWillUnmount = () => {
+        window.removeEventListener('scroll')
+    }
 
     changeSidebar = value => {
         this.setState({ sidebarOpen: value })
@@ -58,11 +74,24 @@ class NavbarSidebar extends Component {
                         <img src = { logo } alt = '' className = 'logo-sidebar'/>
                     </div>
                     <header>
-                        <img src = { menu } alt = ''
-                            onClick = { () => this.changeSidebar(true) }
-                        />
-                        <img src = { logo } alt = ''/>
-                        <img src = { user } alt = ''/>
+                        <div className = 'mobile-version'>
+                            <img src = { menu } alt = ''
+                                onClick = { () => this.changeSidebar(true) }
+                            />
+                            <img src = { logo } alt = ''/>
+                            <img src = { user } alt = ''/>
+                        </div>
+                        <div className = 'desktop-version'>
+                            <img src = { logo } alt = ''/>
+                            <ul className = 'desktop-navbar-list'>
+                                <li className = 'link' >Inicio</li>
+                                <li className = 'link' >Acerca de</li>
+                                <li className = 'link' >Speakers</li>
+                                <li className = 'link' >Equipo Organizador</li>
+                                <li className = 'link' >Patrocinadores</li>
+                                <li className = 'link' >Contacto</li>
+                            </ul>
+                        </div>
                     </header>
                     <div
                         className = { `black-div ${ this.state.sidebarOpen ? 'visible-div' : 'hidden-div' }` }

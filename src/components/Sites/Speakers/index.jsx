@@ -52,7 +52,7 @@ const SpeakerCard = ({ name, avatar, bio, y, visibility, setVisible, id, ...prop
         >
             <div className = { styles.focusArea } >
                 <div className = { styles.imgCont } >
-                    <img src = { avatar } />
+                    <img src = { avatar } alt = 'Image' />
                 </div>
                 <p className = { styles.name } >
                     {name}
@@ -113,10 +113,6 @@ const Speakers = () => {
 
     return(
         <div className = { styles.Speakers } >
-            <div className = { styles.header } >
-                <img src = 'http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png' />
-            </div>
-
             <h3 className = 'subtitle'>Speakers</h3>
 
             {

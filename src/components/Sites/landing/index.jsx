@@ -2,7 +2,9 @@ import React, { Component, Fragment } from 'react'
 import './index.scss'
 import whiteLogo from '../../../images/logo-white-color-transparency.png'
 import CountDown from './Countdown'
-
+import Speakers from '../Speakers'
+import AboutUs from '../AboutUs'
+import InfoEvent from '../InfoEvent'
 
 class Landing extends Component {
 
@@ -52,6 +54,9 @@ class Landing extends Component {
 
                     <CountDown />
                 </div>
+                <AboutUs />
+                <InfoEvent />
+                <Speakers />
             </Fragment>
         )
     }

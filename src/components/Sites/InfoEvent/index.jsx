@@ -24,10 +24,10 @@ class InfoEvent extends Component {
                     <div className = 'ui-info-content'>
                         <img src = { Location } className = 'ui-info-icon' alt = 'Lugar' />
                         <div className = 'ui-info-content-item'>
-                            <label className = 'tittle-info'>{this.state.tittle_Place}</label>
+                            <label className = 'tittle-info'>{ this.state.tittle_Place}</label>
                             <label className = 'tittle-text'>{this.state.place}</label>
                         </div>
-                        <img src = { Calendar } className = 'ui-info-icon' alt = 'Fecha' />
+                        <img src =  { Calendar } className = 'ui-info-icon' alt = 'Fecha' />
                         <div className = 'ui-info-content-item'>
                             <label className = 'tittle-info'>{this.state.tittle_Day}</label>
                             <label className = 'tittle-text'>{this.state.day}</label>

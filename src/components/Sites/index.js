@@ -1,6 +1,6 @@
 import Landing from './Landing'
-import NavbarSidebar from './Navbar'
 import Speakers from './Speakers'
-
-export { Landing, Speakers, NavbarSidebar }
-
+import AboutUs from './AboutUs'
+import NavbarSidebar from './Navbar'
+import InfoEvent from './InfoEvent'
+export { Landing, Speakers, AboutUs, NavbarSidebar, InfoEvent }

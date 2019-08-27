@@ -12,17 +12,17 @@ class Navbar extends Component {
 
     render() {
 	    return (
-	        <div className="ui-navbar">
-                <div className="ui-hamburger-menu">
-                    <div className="line"></div>
-                    <div className="line-large"></div>
-                    <div className="line"></div>
+	        <div className = 'ui-navbar'>
+                <div className = 'ui-hamburger-menu'>
+                    <div className = 'line'></div>
+                    <div className = 'line-large'></div>
+                    <div className = 'line'></div>
                 </div>
-                <img src={Icon} alt="User" className="img-icon"/>
-                <img src={User} alt="User" className="img-nav"/>
+                <img src = { Icon } alt = 'User' className = 'img-icon'/>
+                <img src = { User } alt = 'User' className = 'img-nav'/>
             </div>
 	    )
     }
 }
 
-export default Navbar 
+export default Navbar

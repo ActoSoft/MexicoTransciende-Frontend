@@ -63,6 +63,12 @@ module.exports = {
         ],
         'no-extra-parens': 'error',
         'no-irregular-whitespace': 'error',
-        'no-template-curly-in-string': 'error'
+        'no-template-curly-in-string': 'error',
+        'jsx-quotes': ['error', 'prefer-single'],
+        'react/jsx-equals-spacing': [2, 'always'],
+        'react/jsx-curly-spacing': [2, {'when': 'always', 'spacing': {
+            'objectLiterals': 'never'
+          }}],
+        "react/jsx-closing-bracket-location": [2, "tag-aligned"]
     }
 }

@@ -20,22 +20,22 @@ class InfoEvent extends Component {
     render() {
 	    return (
 	        <div>
-                <div className="ui-info-container">
-                    <div className="ui-info-content">
-                        <img src={Location} className="ui-info-icon" alt="Lugar" />
-                        <div className="ui-info-content-item">
-                            <label className="tittle-info">{this.state.tittle_Place}</label>
-                            <label className="tittle-text">{this.state.place}</label>
+                <div className = 'ui-info-container'>
+                    <div className = 'ui-info-content'>
+                        <img src = { Location } className = 'ui-info-icon' alt = 'Lugar' />
+                        <div className = 'ui-info-content-item'>
+                            <label className = 'tittle-info'>{ this.state.tittle_Place}</label>
+                            <label className = 'tittle-text'>{this.state.place}</label>
                         </div>
-                        <img src={Calendar} className="ui-info-icon" alt="Fecha" />
-                        <div className="ui-info-content-item">
-                            <label className="tittle-info">{this.state.tittle_Day}</label>
-                            <label className="tittle-text">{this.state.day}</label>
+                        <img src =  { Calendar } className = 'ui-info-icon' alt = 'Fecha' />
+                        <div className = 'ui-info-content-item'>
+                            <label className = 'tittle-info'>{this.state.tittle_Day}</label>
+                            <label className = 'tittle-text'>{this.state.day}</label>
                         </div>
-                        <img src={Clock} className="ui-info-icon" alt="Duración"/>
-                        <div className="ui-info-content-item">
-                            <label className="tittle-info">{this.state.tittle_Time}</label>
-                            <label className="tittle-text">{this.state.time}</label>
+                        <img src = { Clock } className = 'ui-info-icon' alt = 'Duración'/>
+                        <div className = 'ui-info-content-item'>
+                            <label className = 'tittle-info'>{this.state.tittle_Time}</label>
+                            <label className = 'tittle-text'>{this.state.time}</label>
                         </div>
                     </div>
                 </div>

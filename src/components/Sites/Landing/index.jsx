@@ -5,6 +5,7 @@ import CountDown from './Countdown'
 import Speakers from '../Speakers'
 import AboutUs from '../AboutUs'
 import InfoEvent from '../InfoEvent'
+import Sponsors from '../Sponsors'
 
 class Landing extends Component {
 
@@ -57,6 +58,7 @@ class Landing extends Component {
                 <AboutUs />
                 <InfoEvent />
                 <Speakers />
+                <Sponsors />
             </Fragment>
         )
     }

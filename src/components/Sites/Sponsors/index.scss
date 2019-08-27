@@ -1,0 +1,29 @@
+@import "../../../partials/colors";
+
+.sponsors-container {
+    width: 100vw;
+    text-align: center;
+    .sponsor-single {
+        width: 40vw;
+        display: inline-block;
+        margin: 4vw;
+        background-color: $white;
+        border-radius: 15px;
+        box-shadow: 5px 5px 3px rgba($color: #000, $alpha: 0.3);
+        .sponsor-image {
+            width: 100%;
+            img {
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+        .sponsor-body {
+            .sponsor-title {
+                padding: 2vh;
+                margin: 0;
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+        }
+    }
+}

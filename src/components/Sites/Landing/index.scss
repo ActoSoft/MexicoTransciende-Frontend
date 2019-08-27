@@ -1,4 +1,5 @@
 @import "../../../partials/colors";
+@import "../../../partials/breakpoints.scss";
 
 .slider-container {
     margin: 0;
@@ -21,4 +22,23 @@
 
 .logo-cover {
     width: 100%;
+}
+
+@include for-phone {
+    .logo-cover {
+        width: 80%;
+    }
+}
+
+@include for-tablet {
+    .logo-cover {
+        width: 70%;
+    }
+}
+
+@include for-desktop {
+    .logo-cover {
+        width: 50%;
+        margin-top: 10vh;
+    }
 }

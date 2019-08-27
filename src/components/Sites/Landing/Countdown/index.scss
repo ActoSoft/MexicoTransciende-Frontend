@@ -1,4 +1,5 @@
 @import "../../../../partials/colors";
+@import "../../../../partials/breakpoints";
 
 .countdown-container {
     width: 90vw;
@@ -8,7 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: color(red, base, 0.8);
+    background-color: color(red, base, 0.9);
     color: color(white, base);
     padding: 2vh 0;
     border-radius: 10px;
@@ -57,5 +58,76 @@
                 font-weight: 700;
             }
         }
+    }
+}
+
+@include for-phone {
+    .countdown-container {
+        width: 80%;
+        height: 25vh;
+        .text {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+    }
+
+    .single-number {
+        font-size: 3em !important;
+        font-weight: 600;
+    }
+}
+
+@include for-tablet {
+    .countdown-container {
+        width: 70%;
+        height: 25vh;
+        .text {
+            font-size: 1.5em !important;
+        }
+    }
+
+    .single-number {
+        font-size: 3em !important;
+    }
+}
+
+@include for-desktop {
+    .countdown-container {
+        width: 60vw;
+        height: 25vh;
+        margin-top: 5vh;
+        padding-top: 5vh;
+        .text {
+            font-size: 1.8em !important;
+            line-height: 10px;
+            margin-bottom: 5vh;
+        }
+    }
+
+    .time-containers {
+        margin: 0 1vw !important;
+        padding-top: 5vh !important;
+        p {
+            font-size: 1em !important;
+        }
+    }
+
+    .single-number {
+        font-size: 3.5em !important;
+        font-weight: 600;
+    }
+}
+
+@include for-large {
+    .countdown-container {
+        width: 50%;
+        padding-top: 5vh !important;
+    }
+    .time-containers {
+        padding-bottom: 5vh !important;
+    }
+    .single-number {
+        font-size: 4rem !important;
+        font-weight: 600;
     }
 }

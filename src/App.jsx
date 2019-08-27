@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
-import './App.scss'
 import Router from './routes'
-import { NavbarSidebar } from './components/Sites'
+import { NavbarSidebar, InfoEvent } from './components/Sites'
+import './App.scss'
 
 const App = () =>
     <Fragment>
         <NavbarSidebar />
         <Router />
+        <InfoEvent />
     </Fragment>
 
 export default App

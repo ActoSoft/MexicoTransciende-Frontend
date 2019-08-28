@@ -1,4 +1,5 @@
 @import "../../../partials/colors";
+@import "../../../partials/breakpoints.scss";
 
 .slider-container {
     margin: 0;
@@ -21,4 +22,70 @@
 
 .logo-cover {
     width: 100%;
+    animation-name: logoentry;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+@keyframes logoentry {
+    0% {
+        opacity: 0;
+        width: 0%;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@include for-phone {
+    .logo-cover {
+        width: 80%;
+    }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 0%;
+        }
+        100% {
+            opacity: 1;
+            width: 80%;
+        }
+    }
+}
+
+@include for-tablet {
+    .logo-cover {
+        width: 70%;
+    }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 7%;
+        }
+        100% {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+}
+
+@include for-desktop {
+    .logo-cover {
+        width: 50%;
+        margin-top: 10vh;
+    }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 0%;
+        }
+        100% {
+            opacity: 1;
+            width: 50%;
+        }
+    }
 }

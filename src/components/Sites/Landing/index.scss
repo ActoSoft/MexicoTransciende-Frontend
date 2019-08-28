@@ -45,11 +45,31 @@
     .logo-cover {
         width: 80%;
     }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 0%;
+        }
+        100% {
+            opacity: 1;
+            width: 80%;
+        }
+    }
 }
 
 @include for-tablet {
     .logo-cover {
         width: 70%;
+    }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 7%;
+        }
+        100% {
+            opacity: 1;
+            width: 100%;
+        }
     }
 }
 
@@ -57,5 +77,15 @@
     .logo-cover {
         width: 50%;
         margin-top: 10vh;
+    }
+    @keyframes logoentry {
+        0% {
+            opacity: 0;
+            width: 0%;
+        }
+        100% {
+            opacity: 1;
+            width: 50%;
+        }
     }
 }

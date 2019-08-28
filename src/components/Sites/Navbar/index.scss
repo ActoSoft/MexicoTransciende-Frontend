@@ -1,7 +1,7 @@
 .Navbar{
     width: 100%;
     overflow-x: hidden;
-    z-index: 100;
+    z-index: 10000;
     &.right-move{
         &+ div {
             position: fixed;
@@ -44,6 +44,8 @@
                 align-items: center;
                 justify-content: space-around;
                 height: 8vh;
+                z-index:1000;
+                box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
                 background-color: #fff;
                 width: 100%;
                 position: fixed;

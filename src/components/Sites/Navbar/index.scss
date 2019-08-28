@@ -1,3 +1,5 @@
+@import "../../../partials/colors";
+
 .Navbar{
     width: 100%;
     overflow-x: hidden;
@@ -72,6 +74,7 @@
                 align-items: center;
                 justify-content: space-around;
                 height: 8vh;
+                z-index: 100;
             }
             img{
                 height: 15vh;

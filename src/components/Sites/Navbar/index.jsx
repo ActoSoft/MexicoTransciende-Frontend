@@ -20,13 +20,13 @@ class NavbarSidebar extends Component {
             let nav = document.getElementsByClassName('desktop-version')[0]
             if( window.scrollY >= window.innerHeight ){
                 nav.style.position = 'fixed'
-                nav.style.backgroundColor = '#fdf0eb'
-                nav.style.animation = 'side-down 0.2s'
+                nav.style.backgroundColor = '#fff'
+                nav.style.animation = 'side-down 0.5s ease-in-out'
+                nav.style.boxShadow = '0px 1px 5px rgba(0,0,0,0.3)'
             }
             else{
                 nav.style.position = 'absolute'
-                nav.style.animation = 'side-up 0.2s'
-                nav.style.backgroundColor = '#0000'
+                nav.style.animation = 'side-up 0.5s ease-in-out'
             }
         })
     }

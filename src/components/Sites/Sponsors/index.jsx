@@ -68,6 +68,7 @@ export default class Sponsors extends Component {
         return(
             <Fragment>
                 <div className = 'sponsors-container'>
+                    <p className = 'sponsors-title'>Patrocinadores</p>
                     { sponsors.map((sponsor, index) =>
                         <SponsorItem
                             key = { index }

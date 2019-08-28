@@ -3,6 +3,27 @@
 .sponsors-container {
     width: 100vw;
     text-align: center;
+    .sponsors-title {
+        font-size: 2em;
+        font-weight: 600;
+        position: relative;
+        color: color(red, base);
+        animation-name: sponsorstitle;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    @keyframes sponsorstitle {
+        0% {
+            top: -1000px;
+            left: -1000px;
+        }
+        100% {
+            top: 0;
+            left: 0;
+        }
+    }
     .sponsor-single {
         width: 45vw;
         display: inline-block;

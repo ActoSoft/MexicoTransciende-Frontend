@@ -4,12 +4,24 @@
     width: 100vw;
     text-align: center;
     .sponsor-single {
-        width: 40vw;
+        width: 45vw;
         display: inline-block;
-        margin: 4vw;
+        margin: 2vw;
         background-color: $white;
         border-radius: 15px;
         box-shadow: 5px 5px 3px rgba($color: #000, $alpha: 0.3);
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+            .sponsor-title {
+                opacity: 0;
+            }
+            .social-media-container {
+                opacity: 1;
+            }
+            .sponsor-body {
+                height: 10vh;
+            }
+        }
         .sponsor-image {
             width: 100%;
             img {
@@ -18,11 +30,30 @@
             }
         }
         .sponsor-body {
+            height: 5vh;
+            transition: height 0.5s ease-in;
             .sponsor-title {
-                padding: 2vh;
+                padding: 1vh;
                 margin: 0;
                 font-size: 1.2em;
                 font-weight: 600;
+                transition: opacity 0.5s ease-out;
+            }
+        }
+
+        .social-media-container {
+            width: 100%;
+            display: flex;
+            margin-top: -5vh;
+            height: 10vh;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+            .sponsor-icon {
+                width: 30px;
+                height: 30px;
             }
         }
     }

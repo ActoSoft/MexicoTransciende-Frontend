@@ -36,7 +36,19 @@ export default class Sponsors extends Component {
                 image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coca-Cola_bottle_cap.svg/1200px-Coca-Cola_bottle_cap.svg.png',
                 facebookURL: 'https://www.facebook.com/CocaColaMx/',
                 instagramURL: 'https://www.instagram.com/cocacola/?hl=es-la'
-            }
+            },
+            {
+                name: 'Coca Cola',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coca-Cola_bottle_cap.svg/1200px-Coca-Cola_bottle_cap.svg.png',
+                facebookURL: 'https://www.facebook.com/CocaColaMx/',
+                instagramURL: 'https://www.instagram.com/cocacola/?hl=es-la'
+            },
+            {
+                name: 'Coca Cola',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Coca-Cola_bottle_cap.svg/1200px-Coca-Cola_bottle_cap.svg.png',
+                facebookURL: 'https://www.facebook.com/CocaColaMx/',
+                instagramURL: 'https://www.instagram.com/cocacola/?hl=es-la'
+            },
         ]
         this.setState({
             sponsors: this.joinSocialMedias(sponsors)

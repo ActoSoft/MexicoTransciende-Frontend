@@ -1,4 +1,5 @@
 @import "../../../partials/colors";
+@import "../../../partials/breakpoints";
 
 .sponsors-container {
     width: 100vw;
@@ -25,9 +26,9 @@
         }
     }
     .sponsor-single {
-        width: 45vw;
+        width: 40vw;
         display: inline-block;
-        margin: 2vw;
+        margin: 4vw;
         background-color: $white;
         border-radius: 15px;
         box-shadow: 5px 5px 3px rgba($color: #000, $alpha: 0.3);
@@ -77,5 +78,26 @@
                 height: 30px;
             }
         }
+    }
+}
+
+@include for-phone {
+    .sponsor-single {
+        width: 35vw !important;
+        margin: 10vw;
+    }
+}
+
+@include for-tablet {
+    .sponsor-single {
+        width: 25vw !important;
+        margin: 10vw;
+    }
+}
+
+@include for-large {
+    .sponsor-single {
+        width: 20vw !important;
+        margin: 15svw;
     }
 }

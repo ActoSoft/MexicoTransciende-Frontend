@@ -11,7 +11,6 @@ class NavbarSidebar extends Component {
         super(props)
         this.state = {
             sidebarOpen: false,
-            // navbarBackground: true
         }
     }
 
@@ -75,8 +74,8 @@ class NavbarSidebar extends Component {
                     </div>
                     <header>
                         <div className = 'mobile-version'>
-                            <img src = { menu } alt = ''
-                                onClick = { () => this.changeSidebar(true) }
+                            <img src = { !this.state.sidebarOpen ? menu : cross } alt = ''
+                                onClick = { () => this.changeSidebar(!this.state.sidebarOpen) }
                             />
                             <img src = { logo } alt = ''/>
                             <img src = { user } alt = ''/>

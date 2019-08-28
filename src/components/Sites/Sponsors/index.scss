@@ -95,9 +95,9 @@
     }
 }
 
-@include for-large {
+@include for-desktop {
     .sponsor-single {
         width: 20vw !important;
-        margin: 15svw;
+        margin: 15vw;
     }
 }

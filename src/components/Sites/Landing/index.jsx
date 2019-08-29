@@ -2,10 +2,17 @@ import React, { Component, Fragment } from 'react'
 import './index.scss'
 import whiteLogo from '../../../images/logo-white-color-transparency.png'
 import CountDown from './Countdown'
-import Speakers from '../Speakers'
-import AboutUs from '../AboutUs'
-import InfoEvent from '../InfoEvent'
-import Sponsors from '../Sponsors'
+// import Speakers from '../Speakers'
+// import AboutUs from '../AboutUs'
+// import InfoEvent from '../InfoEvent'
+// import Sponsors from '../Sponsors'
+import {
+    Speakers,
+    AboutUs,
+    InfoEvent,
+    Sponsors,
+    ContactForm
+} from '../'
 
 class Landing extends Component {
 
@@ -24,6 +31,7 @@ class Landing extends Component {
             'https://images.pexels.com/photos/32976/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
         ]})
     }
+
     componentDidMount = () => {
         this.getImages()
         setInterval(() => {
@@ -59,6 +67,7 @@ class Landing extends Component {
                 <InfoEvent />
                 <Speakers />
                 <Sponsors />
+                <ContactForm />
             </Fragment>
         )
     }

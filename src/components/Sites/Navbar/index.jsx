@@ -26,6 +26,8 @@ class NavbarSidebar extends Component {
             else{
                 nav.style.position = 'absolute'
                 nav.style.animation = 'side-up 0.5s ease-in-out'
+                nav.style.backgroundColor = '#fff0'
+                nav.style.boxShadow = '0px 0px 0px rgba(0,0,0,0.3)'
             }
         })
     }

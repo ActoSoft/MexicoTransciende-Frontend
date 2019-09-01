@@ -13,7 +13,8 @@ class Landing extends Component {
         super(props)
         this.state = {
             images: [],
-            actualImage: 0
+            actualImage: 0,
+            transition: false
         }
     }
 
@@ -27,26 +28,40 @@ class Landing extends Component {
     componentDidMount = () => {
         this.getImages()
         setInterval(() => {
-            let { images, actualImage } = this.state
+            let { images, actualImage, transition } = this.state
             actualImage = actualImage + 1 === images.length
                 ? 0 : actualImage + 1
-            this.setState({ actualImage })
+            transition = true
+            this.setState({ actualImage, transition })
+            setTimeout( () => {
+                this.setState({ transition: false })
+            }, 1000)
         }, 5000)
     }
 
 
     render() {
-        const { images, actualImage } = this.state
+        const { images, actualImage, transition } = this.state
         return (
             <Fragment>
                 <div
                     className = 'slider-container'
                     style = {{
                         backgroundImage: `linear-gradient(rgba(255, 0, 0, 0.30),
-                        rgba(176, 59, 60, 0.30)),
-                        url('${images[actualImage]}'`
+                        rgba(176, 59, 60, 0.30))`,
+                        position: 'relative'
                     }}
                 >
+                    <div className = { `before ${transition ? 'active' : 'not-active'}` }
+                        style = {{
+                            backgroundImage: `url(${transition ? actualImage - 1 < 0 ? images[images.length - 1] : images[actualImage - 1] : images[actualImage]})`,
+                        }}
+                    />
+                    <div className = { `after ${transition ? 'active' : 'not-active'}` }
+                        style = {{
+                            backgroundImage: `url(${images[actualImage]})`,
+                        }}
+                    />
                     <img
                         src = { whiteLogo }
                         className = 'logo-cover'

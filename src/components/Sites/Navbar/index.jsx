@@ -4,6 +4,7 @@ import cross from '../../../images/icons/multiply.svg'
 import menu from '../../../images/icons/menu.svg'
 import user from '../../../images/icons/user.svg'
 import './index.scss'
+import { Link } from 'react-router-dom'
 
 class NavbarSidebar extends Component {
 
@@ -80,11 +81,11 @@ class NavbarSidebar extends Component {
                             <img src = { !this.state.sidebarOpen ? menu : cross } alt = ''
                                 onClick = { () => this.changeSidebar(!this.state.sidebarOpen) }
                             />
-                            <img src = { logo } alt = ''/>
+                            <Link to = '/'><img className = 'navbar-mobile-version' src = { logo } alt = ''/></Link>
                             <a href = '/login'><img src = { user } alt = ''/></a>
                         </div>
                         <div className = 'desktop-version'>
-                            <img src = { logo } alt = ''/>
+                            <Link to = '/'><img src = { logo } alt = ''/></Link>
                             <ul className = 'desktop-navbar-list'>
                                 <li className = 'link' ><a href = '/'>Inicio</a></li>
                                 <li className = 'link' >Acerca de</li>

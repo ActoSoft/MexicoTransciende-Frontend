@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { Layout, Input, Button } from 'antd'
 import './index.scss'
+import { withAuth } from '../../../../auth'
 const { Content } = Layout
-
-export default class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props)
         this.state = {
             email: '',
             password: ''
         }
+        this.login = this.props.auth.handleLogin
     }
 
     changeCredentials = (event) => {
@@ -19,8 +20,14 @@ export default class Login extends Component {
         })
     }
 
-    handleLogin = () => {
-        console.log('Login')
+    handleLogin = async () => {
+        try {
+            const userLogged = await this.login(this.state)
+            if (!userLogged.hasError) console.log(userLogged)
+            else console.log('Ahorita vemos que pedo')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     render() {
@@ -52,3 +59,4 @@ export default class Login extends Component {
         )
     }
 }
+export default withAuth(Login)

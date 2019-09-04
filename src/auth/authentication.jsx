@@ -37,27 +37,35 @@ class Authentication {
 
     handleLogin = async (data) => {
         try {
-            let response = await axios.get(loginEndpoint, data)
+            let response = await axios.post(loginEndpoint, data)
+            console.log(response)
             if (response.data) {
                 const { token, user } = response.data
-                const { username, email, first_name, last_name, id } = user
+                const { email, gender, name, phone, role, _id } = user
                 localStorage.setItem('token', token)
-                localStorage.setItem('username', username)
+                localStorage.setItem('name', name)
                 localStorage.setItem('email', email)
-                localStorage.setItem('firstName', first_name)
-                localStorage.setItem('lastName', last_name)
-                localStorage.setItem('userId', id)
+                localStorage.setItem('gender', gender)
+                localStorage.setItem('phone', phone)
+                localStorage.setItem('role', role)
+                localStorage.setItem('_id', _id)
                 toast.success('Has iniciado sesión con éxito')
-                return true
+                return user
             }
             else {
                 toast.error('Algo falló al iniciar sesión')
-                return false
+                return {
+                    hasError: true,
+                    error: response.data.message
+                }
             }
         } catch (error) {
-            console.log(error)
-            toast.error('Algo falló al iniciar sesión')
-            return false
+            console.log()
+            toast.error(error.response.data.message)
+            return {
+                hasError: true,
+                error: error.response.data.message
+            }
         }
     }
 

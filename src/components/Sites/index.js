@@ -7,6 +7,7 @@ import Sponsors from './Sponsors'
 import Login from './Accounts/Login'
 import Register from './Accounts/Register'
 import ContactForm from './ContactForm/'
+import Organizers from './TeamOrganizer'
 
 import Dashboard from './Admin/Dashboard'
 
@@ -20,5 +21,6 @@ export {
     Login,
     Dashboard,
     Register,
-    ContactForm
+    ContactForm,
+    Organizers
 }

@@ -23,8 +23,18 @@ class Login extends Component {
     handleLogin = async () => {
         try {
             const userLogged = await this.login(this.state)
-            if (!userLogged.hasError) console.log(userLogged)
-            else console.log('Ahorita vemos que pedo')
+            if (!userLogged.hasError) {
+                if (userLogged.role === 'Assistant') {
+                    setTimeout(() => {
+                        this.props.history.push('/profile')
+                    }, 3000)
+                } else {
+                    setTimeout(() => {
+                        this.props.history.push('/dashboard')
+                    }, 3000)
+                }
+            }
+            else console.log(userLogged.error)
         } catch (error) {
             console.log(error)
         }

@@ -19,8 +19,11 @@ class Authentication {
     }
 
     isAuthenticated = () => {
-        if(this.token) return true
-        return false
+        if (this.token) return true
+        else {
+            toast.error('Debes iniciar sesiòn primero')
+            return false
+        }
     }
 
     getHeaderAuthToken = () => {

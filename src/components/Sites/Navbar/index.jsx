@@ -65,12 +65,13 @@ class NavbarSidebar extends Component {
                             onClick = { () => this.changeSidebar(false) }
                         />
                         <ul className = 'options-container' >
-                            <li className = 'link' onClick = { () => this.changeSidebar(false) }>Inicio</li>
+                            <li className = 'link' onClick = { () => this.changeSidebar(false) }><a href = '/'>Inicio</a></li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Acerca de</li>
                             {/*<li className = 'link' onClick = { () => this.changeSidebar(false) }>Ponentes</li>*/}
-                            <li className = 'link' onClick = { () => this.changeSidebar(false) }>Equipo Org.</li>
+                            <li className = 'link' onClick = { () => this.changeSidebar(false) }><a href = '/organizers'>Equipo Org.</a></li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Patrocinadores</li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Contacto</li>
+                            <li className = 'link' onClick = { () => this.changeSidebar(false) }><a href = '/login'>Iniciar Sesión</a></li>
                         </ul>
                         <img src = { logo } alt = '' className = 'logo-sidebar'/>
                     </div>
@@ -85,12 +86,13 @@ class NavbarSidebar extends Component {
                         <div className = 'desktop-version'>
                             <img src = { logo } alt = ''/>
                             <ul className = 'desktop-navbar-list'>
-                                <li className = 'link' >Inicio</li>
+                                <li className = 'link' ><a href = '/'>Inicio</a></li>
                                 <li className = 'link' >Acerca de</li>
                                 {/*<li className = 'link' >Ponentes</li>*/}
-                                <li className = 'link' >Equipo Organizador</li>
+                                <li className = 'link' ><a href = '/organizers'>Equipo Organizador</a></li>
                                 <li className = 'link' >Patrocinadores</li>
                                 <li className = 'link' >Contacto</li>
+                                <li className = 'link' ><a href = '/login'>Iniciar Sesión</a></li>
                             </ul>
                         </div>
                     </header>

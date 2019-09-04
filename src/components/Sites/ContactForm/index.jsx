@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Input, Button } from 'antd';
+import { Input, Button } from 'antd'
 import './index.scss'
 
-const { TextArea } = Input;
+const { TextArea } = Input
 
 export default class ContactForm extends Component {
     constructor(props) {

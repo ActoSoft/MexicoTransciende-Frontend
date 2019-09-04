@@ -6,6 +6,7 @@ import {
     // Speakers,
     AboutUs,
     InfoEvent,
+    Organizers,
     // Sponsors,
     ContactForm
 } from '../'
@@ -110,6 +111,7 @@ class Landing extends Component {
                 <InfoEvent />
                 {/* <Speakers />
                 <Sponsors /> */}
+                <Organizers />
                 <ContactForm />
             </Fragment>
         )

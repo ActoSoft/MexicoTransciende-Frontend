@@ -1,0 +1,175 @@
+@import '../../../partials/colors';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.TeamOrganizer {
+    margin-bottom: 100px;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.header {
+    max-height: 40vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.TeamContainer {
+    padding: 20px 30px !important;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    .titleContainer {
+        width: 300px;
+        height: 58px;
+        background-color: color(white, base);
+        border-radius: 50px;
+        box-shadow: 0px 4px 5px color(black, base, .2);
+        margin: 0px;
+    
+        h3 {
+            width: 100%;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: color(red, base)
+        }
+    }
+}
+
+[class *= "card"]{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.OrganizerCard {
+    width: 150px;
+    height: 250px;
+    padding: 10px;
+    margin-left: 30px;
+    background-color: color(white, base) !important;
+    border-radius: 0px;
+    box-shadow: 0px 5px 7px color(black, base, .2);
+    transform: translateX(-15px);
+    transition: .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+
+    &.firstCorner {
+        border-radius: 25px 0px 0px 0px !important;
+    }
+
+    &.secondCorner {
+        border-radius: 0px 25px 0px 0px !important;
+    }
+
+    &.thirdCroner {
+        border-radius: 0px 0px 25px 0px !important;
+    }
+
+    &.fourthCorner {
+        border-radius: 0px 0px 0px 25px !important;
+    }
+
+    .cardImgCont {
+        width: 100%;
+        height: 65px;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+
+    .cardName{
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: color(black, base);
+    }
+    .cardRole {
+        max-width: 100%;
+        margin: 0px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: color(red, base);
+    }
+
+    .cardBio {
+        width: 100%;
+        margin: 0px;
+        font-weight: 400;
+        font-size: 0.59rem;
+        color: color(black, base);
+    }
+}
+
+[class*="organizerCont"]{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.Row{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+[class*="col"]{
+    float: left;
+    padding: 10px;
+}
+
+
+// LG DISPLAY
+@media(min-width: 1200px){
+    .colL3 {width: 33.33333333%; padding: 15px 15px;}
+    .organizerContL { padding: 0px 300px; }
+}
+
+// MD DISPLAY
+@media(min-width: 992px) and (max-width: 1199px){
+    .colM3 {width: 33.33333333%; padding: 15px 15px;}
+    .organizerContM { padding: 0px 250px; }
+}
+
+// SM DISPLAY
+@media(min-width: 768px) and (max-width: 991px){
+    .colS4 {width: 33.33333333%; padding: 15px 30px;}
+    .organizerContS { padding: 0px 145px; }
+}
+
+// XM DISPLAY
+@media(max-width: 767px){
+    .colXS6 {width: 50%;}
+    .organizerContS { padding: 0px 0px; }
+}

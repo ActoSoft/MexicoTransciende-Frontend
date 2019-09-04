@@ -47,7 +47,7 @@ class Landing extends Component {
                 <div
                     className = 'slider-container'
                     style = {{
-                        backgroundImage: `linear-gradient(rgba(255, 0, 0, 0.30),
+                        backgroundImage: `linear-gradient(rgba(255, 0, 0, 0.50),
                         rgba(176, 59, 60, 0.30))`,
                         position: 'relative'
                     }}

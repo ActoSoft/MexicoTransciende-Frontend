@@ -101,6 +101,9 @@
                 font-size: 1.5em;
                 margin: 5vh 30px;
                 transition: 0.3s;
+                a { 
+                    color: #ba484a;
+                }
                 &:active{
                     transform: translateX(15px);
                     opacity: 0.7;
@@ -187,6 +190,9 @@
             font-weight: 600;
             li{
                 font-size: 1em;
+                a{
+                    color: rgba(0, 0, 0, 0.65);
+                }
             }
         }
         @keyframes side-down {

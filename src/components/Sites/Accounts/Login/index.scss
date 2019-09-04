@@ -1,8 +1,7 @@
 @import "../../../../partials/colors";
 
 .layout {
-    min-height: 100vh;
-    height: 92vh;
+    min-height: 100vh !important;
     margin-top: 8vh;
     width: 100%;
     // background-image: url('../../../../images/tenango-background.png') !important;
@@ -15,7 +14,9 @@
 
     .content {
         min-width: 300px !important;
-        padding: 2vh 0 !important;
+        padding: 5vh 0 !important;
+        margin: 5vh 0 !important;
+        max-width: 80%;
         background-color: color(red, base);
         border-radius: 5px;
         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);

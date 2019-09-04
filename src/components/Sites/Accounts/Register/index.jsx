@@ -100,10 +100,6 @@ export default class Register extends Component {
                     >
                         Registrarse
                     </Button>
-
-                    <p>
-                        ¿Ya tienes una cuenta? Haz click <a href = '/login'>aquí</a> para iniciar sesión
-                    </p>
                 </Content>
             </Layout>
         )

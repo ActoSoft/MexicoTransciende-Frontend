@@ -12,7 +12,7 @@ class InfoEvent extends Component {
             tittle_Time: 'Duración:',
             tittle_Day: 'Día:',
             place: 'Tecnólogico de Monterrey, campus Pachuca.',
-            time: '8:00 hrs - 18:00 hrs',
+            time: '8:00 hrs - 20:00 hrs',
             day: '14 de noviembre'
         }
     }

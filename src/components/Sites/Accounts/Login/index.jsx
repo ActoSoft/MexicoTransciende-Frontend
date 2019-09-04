@@ -8,7 +8,8 @@ class Login extends Component {
         super(props)
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            loading: false
         }
         this.login = this.props.auth.handleLogin
     }
@@ -21,8 +22,10 @@ class Login extends Component {
     }
 
     handleLogin = async () => {
+        this.activateLoading()
         try {
             const userLogged = await this.login(this.state)
+            this.desactivateLoading()
             if (!userLogged.hasError) {
                 if (userLogged.role === 'Assistant') {
                     setTimeout(() => {
@@ -36,8 +39,21 @@ class Login extends Component {
             }
             else console.log(userLogged.error)
         } catch (error) {
+            this.desactivateLoading()
             console.log(error)
         }
+    }
+
+    activateLoading = () => {
+        this.setState({
+            loading: true
+        })
+    }
+
+    desactivateLoading = () => {
+        this.setState({
+            loading: false
+        })
     }
 
     render() {
@@ -62,6 +78,7 @@ class Login extends Component {
                     <Button
                         className = 'login-btn'
                         size = 'large'
+                        loading = { this.state.loading }
                         onClick = { this.handleLogin }
                     >Entrar</Button>
                 </Content>

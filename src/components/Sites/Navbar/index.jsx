@@ -15,44 +15,6 @@ class NavbarSidebar extends Component {
         }
     }
 
-    componentDidMount = ( ) => {
-        window.addEventListener('scroll', () => {
-            let nav = document.getElementsByClassName('desktop-version')[0]
-            if( window.scrollY >= window.innerHeight ){
-                nav.style.position = 'fixed'
-                nav.style.backgroundColor = '#fff'
-                nav.style.animation = 'side-down 0.5s ease-in-out'
-                nav.style.boxShadow = '0px 1px 5px rgba(0,0,0,0.3)'
-            }
-            else{
-                nav.style.position = 'absolute'
-                nav.style.animation = 'side-up 0.5s ease-in-out'
-                nav.style.backgroundColor = '#fff0'
-                nav.style.boxShadow = '0px 0px 0px rgba(0,0,0,0.3)'
-            }
-        })
-    }
-
-    // changePosition = () => {
-    //     let { scrollY, innerHeight } = window
-    //     let { navbarBackground } = this.state
-    //     if(scrollY > innerHeight && !navbarBackground) {
-    //         this.setState({ navbarBackground: true })
-    //     }
-
-    //     if(scrollY < innerHeight && navbarBackground) {
-    //         this.setState({ navbarBackground: false })
-    //     }
-    // }
-
-    // componentDidMount = () => {
-    //     window.addEventListener('scroll', this.changePosition)
-    // }
-
-    componentWillUnmount = () => {
-        window.removeEventListener('scroll')
-    }
-
     changeSidebar = value => {
         this.setState({ sidebarOpen: value })
     }

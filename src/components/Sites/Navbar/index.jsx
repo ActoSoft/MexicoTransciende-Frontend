@@ -67,7 +67,7 @@ class NavbarSidebar extends Component {
                         <ul className = 'options-container' >
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Inicio</li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Acerca de</li>
-                            <li className = 'link' onClick = { () => this.changeSidebar(false) }>Speakers</li>
+                            {/*<li className = 'link' onClick = { () => this.changeSidebar(false) }>Ponentes</li>*/}
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Equipo Org.</li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Patrocinadores</li>
                             <li className = 'link' onClick = { () => this.changeSidebar(false) }>Contacto</li>
@@ -87,7 +87,7 @@ class NavbarSidebar extends Component {
                             <ul className = 'desktop-navbar-list'>
                                 <li className = 'link' >Inicio</li>
                                 <li className = 'link' >Acerca de</li>
-                                <li className = 'link' >Speakers</li>
+                                {/*<li className = 'link' >Ponentes</li>*/}
                                 <li className = 'link' >Equipo Organizador</li>
                                 <li className = 'link' >Patrocinadores</li>
                                 <li className = 'link' >Contacto</li>

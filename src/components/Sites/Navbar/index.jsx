@@ -81,7 +81,7 @@ class NavbarSidebar extends Component {
                                 onClick = { () => this.changeSidebar(!this.state.sidebarOpen) }
                             />
                             <img src = { logo } alt = ''/>
-                            <img src = { user } alt = ''/>
+                            <a href = '/login'><img src = { user } alt = ''/></a>
                         </div>
                         <div className = 'desktop-version'>
                             <img src = { logo } alt = ''/>

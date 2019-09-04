@@ -9,22 +9,18 @@ import {
 class Authentication {
     constructor() {
         this.token = localStorage.getItem('token')
-        this.username = localStorage.getItem('username')
+        this.name = localStorage.getItem('name')
         this.email = localStorage.getItem('email')
-        this.firstName = localStorage.getItem('first_name')
-        this.lastName = localStorage.getItem('last_name')
+        this.gender = localStorage.getItem('gender')
+        this.phone = localStorage.getItem('phone')
+        this.role = localStorage.getItem('role')
+        this._id = localStorage.getItem('_id')
         this.API_URL = process.env.REACT_APP_API_URL
     }
 
     isAuthenticated = () => {
         if(this.token) return true
         return false
-    }
-
-    getFullname = () => {
-        const name = this.firstName ? this.firstName : 'Nombre'
-        const lastName = this.lastName ? this.lastName : 'Apellidos'
-        return `${name} ${lastName}`
     }
 
     getHeaderAuthToken = () => {

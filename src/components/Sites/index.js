@@ -7,6 +7,8 @@ import Sponsors from './Sponsors'
 
 import Login from './Accounts/Login'
 
+import Dashboard from './Admin/Dashboard'
+
 export {
     Landing,
     Speakers,
@@ -14,5 +16,6 @@ export {
     NavbarSidebar,
     InfoEvent,
     Sponsors,
-    Login
+    Login,
+    Dashboard
 }

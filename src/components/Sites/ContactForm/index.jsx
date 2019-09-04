@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Input, Button } from 'antd';
 import './index.scss'
+
+const { TextArea } = Input;
 
 export default class ContactForm extends Component {
     constructor(props) {
@@ -52,6 +55,7 @@ export default class ContactForm extends Component {
 
                     <Input
                         name = 'phone'
+                        type = 'number'
                         placeholder = 'Teléfono de contacto'
                         required = { false }
                         onChange = { this.changeValue }
@@ -67,49 +71,11 @@ export default class ContactForm extends Component {
                     <Button
                         name = 'btn-save'
                         onClick = { this.saveContact }
-                        value = 'Enviar'
-                    />
+                    >
+                        Enviar
+                    </Button>
                 </div>
             </div>
         )
     }
 }
-
-const Input = ({
-    name,
-    placeholder,
-    onChange,
-    required }) =>
-    <input
-        className = 'contact-form-text'
-        type = 'text'
-        name = { name }
-        placeholder = { placeholder }
-        onChange = { (e) => onChange(e) }
-        required = { required ? 'required' : null }
-    />
-
-const TextArea = ({
-    name,
-    placeholder,
-    onChange,
-    required }) =>
-    <textarea
-        className = 'contact-form-textarea'
-        name = { name }
-        placeholder = { placeholder }
-        onChange = { (e) => onChange(e) }
-        required = { required ? 'required' : null }
-    />
-
-const Button = ({
-    value,
-    onClick,
-    name }) =>
-    <button
-        className = 'contact-form-btn'
-        onClick = { (e) => onClick(e) }
-        name = { name }
-    >
-        { value }
-    </button>

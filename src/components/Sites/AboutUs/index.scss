@@ -1,23 +1,26 @@
 .ui-about-container{
     max-width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
 .ui-about-content-text {
     width: 75vw;
-    height: 50vh;
+    height: auto;
     background: #B13B3C;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15vh;
     margin-bottom: 8vh;
+    padding-bottom: 5vh;
     border: 1px;
     border-radius: 150px 0px 150px 0px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     -webkit-box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
     -moz-box-shadow: -20px 20px 0px -4px rgba(255,255,255,0.26);
@@ -34,7 +37,7 @@
     font-weight: bold;
     display: block;
     text-align: center;
-    margin-bottom: 2vh;
+    margin: 3vh 0;
 }
 .ui-about-text-content{
     color: #fff;
@@ -58,7 +61,7 @@
 
     .ui-about-content-text {
         width: 70vw;
-        height: 60vh;
+        height: auto;
         background: #B13B3C;
         margin-left: auto;
         margin-right: auto;

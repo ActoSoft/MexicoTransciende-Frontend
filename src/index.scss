@@ -1,5 +1,8 @@
 @import './partials/colors';
 
+html {
+  min-height: 100vh;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,6 +14,7 @@ body {
   background-image: linear-gradient(color(white, base), color(pink, base));
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: auto;
   min-height: 100vh;
   max-width: 100vw;
 }

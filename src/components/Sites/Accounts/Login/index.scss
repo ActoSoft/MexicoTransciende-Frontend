@@ -14,8 +14,8 @@
     align-items: center !important;
 
     .content {
-        width: 30%;
-        height: 70vh;
+        min-width: 300px !important;
+        padding: 2vh 0 !important;
         background-color: color(red, base);
         border-radius: 5px;
         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -32,11 +32,12 @@
 
         }
 
-        .login-input{
-            width: 60%;
-            height: 6vh;
+        input {       
+            width: 80%;
+            min-height: 40px;
+            height: 4vh;
+            margin: 10px 0;
             text-align: center;
-            // font-size: 1em;
             &::placeholder {
                 text-align: center;
                 color: color(black, base, 0.4);
@@ -48,29 +49,16 @@
                 border-width: 2px;
             }
         }
-
-        .login-input-password{
-            width: 60%;
-            height: 6vh;
-            // font-size: 1em !important;
+        .ant-input-password {
+            width: 80% !important;
             input {
-                text-align: center;
-                &::placeholder {
-                    text-align: center;
-                    color: color(black, base, 0.4);
-                }
-
-                &:focus, &:active, &:hover {
-                    border-color: color(yellow, base, 0.8);
-
-                    border-width: 2px;
-                }
+                width: 100% !important;
             }
         }
 
         .login-btn {
-            width: 40%;
             border-radius: 20px;
+            margin: 10px 0;
             color: color(red, base);
             font-size: 1em;
             font-weight: 600;

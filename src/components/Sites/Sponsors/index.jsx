@@ -97,7 +97,7 @@ export default class Sponsors extends Component {
 const SponsorItem = ({sponsor}) =>
     <div className = 'sponsor-single'>
         <div className = 'sponsor-image'>
-            <img src = { sponsor.image } alt = 'Sponsor Image' />
+            <img src = { sponsor.image } alt = 'Sponsor' />
         </div>
         <div className = 'sponsor-body'>
             <p className = 'sponsor-title'>{sponsor.name}</p>

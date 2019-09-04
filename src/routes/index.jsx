@@ -4,13 +4,15 @@ import PrivateRoute from './privateRoute'
 import {
     ROOT,
     LOGIN,
-    DASHBOARD
+    DASHBOARD,
+    REGISTER
 } from '../utils/routes'
 
 import {
     Landing,
     Login,
-    Dashboard
+    Dashboard,
+    Register
 } from '../components/Sites'
 
 const Routes = () =>
@@ -19,6 +21,7 @@ const Routes = () =>
             <Route exact path = { ROOT } component = { Landing } />
             <Route exact path = { LOGIN } component = { Login } />
             <PrivateRoute exact path = { DASHBOARD } component = { Dashboard } />
+            <PrivateRoute exact path = { REGISTER } component = { Register } />
         </Switch>
     </Fragment>
 

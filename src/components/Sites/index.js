@@ -6,6 +6,7 @@ import InfoEvent from './InfoEvent'
 import Sponsors from './Sponsors'
 
 import Login from './Accounts/Login'
+import Register from './Accounts/Register'
 
 import Dashboard from './Admin/Dashboard'
 
@@ -17,5 +18,6 @@ export {
     InfoEvent,
     Sponsors,
     Login,
-    Dashboard
+    Dashboard,
+    Register
 }

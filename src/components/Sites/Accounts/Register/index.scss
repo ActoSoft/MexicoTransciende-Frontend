@@ -1,0 +1,62 @@
+@import "../../../../partials/colors";
+.content {
+    min-width: 300px !important;
+    height: 90% !important;
+    input {
+        width: 90%;
+        height: 4vh;
+        margin: 1vw 0;
+        text-align: center;
+        &::placeholder {
+            text-align: center;
+            color: color(black, base, 0.4);
+        }
+
+        &:focus, &:active, &:hover {
+            border-color: color(yellow, base, 0.8);
+
+            border-width: 2px;
+        }
+    }
+    .register-input-phone, .register-input-age {
+        padding: 4px 0 4px 11px !important;
+    }
+    .ant-dropdown-trigger {
+        margin: 1vw 0;
+        height: 4vh;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            width: 100%;
+        }
+        i {
+            margin:0 0 0 -12px !important;
+        }
+    }
+    .register-btn {
+        border-radius: 20px;
+        margin: 5px 0;
+        color: color(red, base);
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        border: 0;
+        outline: none;
+
+        &:hover {
+            // background-color: color(red, base);
+            // box-shadow: 0px 15px 20px color(yellow, base, 0.4);
+            // color: #fff;
+            transform: translateY(-7px);
+        }
+    }
+    p {
+        padding: 0 20px;
+    }
+}

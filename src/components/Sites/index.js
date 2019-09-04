@@ -6,6 +6,7 @@ import InfoEvent from './InfoEvent'
 import Sponsors from './Sponsors'
 
 import Login from './Accounts/Login'
+import Register from './Accounts/Register'
 
 export {
     Landing,
@@ -14,5 +15,6 @@ export {
     NavbarSidebar,
     InfoEvent,
     Sponsors,
-    Login
+    Login,
+    Register
 }

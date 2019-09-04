@@ -1,0 +1,94 @@
+@import "../../../../partials/colors";
+
+.layout {
+    min-height: 100vh;
+    height: 92vh;
+    margin-top: 8vh;
+    width: 100%;
+    // background-image: url('../../../../images/tenango-background.png') !important;
+    // background-size: cover;
+    background-color: color(white, base) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    .content {
+        width: 30%;
+        height: 70vh;
+        background-color: color(red, base);
+        border-radius: 5px;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: color(white, base);
+        font-size: 1.5em !important;
+        flex: none;
+
+        .login-title {
+            font-size: 1.5em;
+
+        }
+
+        .login-input{
+            width: 60%;
+            height: 6vh;
+            text-align: center;
+            // font-size: 1em;
+            &::placeholder {
+                text-align: center;
+                color: color(black, base, 0.4);
+            }
+
+            &:focus, &:active, &:hover {
+                border-color: color(yellow, base, 0.8);
+
+                border-width: 2px;
+            }
+        }
+
+        .login-input-password{
+            width: 60%;
+            height: 6vh;
+            // font-size: 1em !important;
+            input {
+                text-align: center;
+                &::placeholder {
+                    text-align: center;
+                    color: color(black, base, 0.4);
+                }
+
+                &:focus, &:active, &:hover {
+                    border-color: color(yellow, base, 0.8);
+
+                    border-width: 2px;
+                }
+            }
+        }
+
+        .login-btn {
+            width: 40%;
+            border-radius: 20px;
+            color: color(red, base);
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+
+            &:hover {
+                // background-color: color(red, base);
+                // box-shadow: 0px 15px 20px color(yellow, base, 0.4);
+                // color: #fff;
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
+

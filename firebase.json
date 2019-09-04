@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "target": "mexicotrasciendeitesm",
     "public": "build",
     "ignore": [
       "firebase.json",

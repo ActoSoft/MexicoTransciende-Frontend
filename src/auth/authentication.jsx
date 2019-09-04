@@ -3,7 +3,8 @@ import { toast } from 'react-toastify'
 import {
     loginEndpoint,
     forgotPasswordEndpoint,
-    resetPasswordEndpoint
+    resetPasswordEndpoint,
+    registerEndpoint
 } from '../utils/backendEndpoints'
 
 class Authentication {
@@ -29,7 +30,7 @@ class Authentication {
     getHeaderAuthToken = () => {
         return {
             headers: {
-                Authorization: `Bearer ${this.token}`
+                Authorization: this.token
             }
         }
     }
@@ -37,7 +38,6 @@ class Authentication {
     handleLogin = async (data) => {
         try {
             let response = await axios.post(loginEndpoint, data)
-            console.log(response)
             if (response.data) {
                 const { token, user } = response.data
                 const { email, gender, name, phone, role, _id } = user
@@ -59,7 +59,24 @@ class Authentication {
                 }
             }
         } catch (error) {
-            console.log()
+            toast.error(error.response.data.message)
+            return {
+                hasError: true,
+                error: error.response.data.message
+            }
+        }
+    }
+
+    handleRegister = async (data) => {
+        try {
+            let response = await axios.post(registerEndpoint, data, this.getHeaderAuthToken())
+            if (response.data && response.data.message === 'ok') {
+                toast.success('Asistente registrado con éxito!')
+                return response.data
+            } else {
+                toast.error('Algo falló al crear usuario :(')
+            }
+        } catch (error) {
             toast.error(error.response.data.message)
             return {
                 hasError: true,

@@ -1,0 +1,82 @@
+@import "../../../partials/colors";
+@import "../../../partials/breakpoints";
+
+.contact-form-container {
+    border-radius: 20px;
+    padding: 5vh 1vh;
+    margin: 5vh auto;
+    background-color: color(red, base);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.3);
+    .contact-form-instructions {
+        width: 100%;
+        color: color(white, base);
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+    }
+    .contact-form-form {
+        width: 100%;
+        // padding: 0 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        input, textarea {
+            width: 80%;
+            margin: 2vh 0;
+            &::placeholder {
+                text-align: center;
+                color: color(black, base, 0.4);
+                font-size: 1em;
+                font-weight: 600;
+            }
+
+            &:focus, &:active, &:hover {
+                border-color: color(yellow, base, 0.8);
+
+                border-width: 2px;
+            }
+        }
+        input {
+            height: 5vh;
+        }
+        button {
+            border-radius: 20px;
+            margin: 10px 0;
+            color: color(red, base);
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+
+            &:hover {
+                // background-color: color(red, base);
+                // box-shadow: 0px 15px 20px color(yellow, base, 0.4);
+                // color: #fff;
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
+
+@include for-tablet {
+    .contact-form-container {
+        width: 70%;
+    }
+}
+
+@include for-desktop {
+    .contact-form-container {
+        width: 60%;
+    }
+}

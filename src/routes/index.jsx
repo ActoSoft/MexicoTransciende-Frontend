@@ -5,16 +5,14 @@ import {
     ROOT,
     LOGIN,
     DASHBOARD,
-    REGISTER,
-    ORGANIZERS
+    REGISTER
 } from '../utils/routes'
 
 import {
     Landing,
     Login,
     Dashboard,
-    Register,
-    Organizers
+    Register
 } from '../components/Sites'
 
 const Routes = () =>
@@ -22,7 +20,6 @@ const Routes = () =>
         <Switch>
             <Route exact path = { ROOT } component = { Landing } />
             <Route exact path = { LOGIN } component = { Login } />
-            <Route exact path = { ORGANIZERS } component = { Organizers } />
             <PrivateRoute exact path = { DASHBOARD } component = { Dashboard } />
             <PrivateRoute exact path = { REGISTER } component = { Register } />
         </Switch>

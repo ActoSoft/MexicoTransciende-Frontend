@@ -50,7 +50,7 @@ const OrganizerCard = ({ avatar, name, role, bio, ...props }) => {
 const OrganizerColumn = ({ ...organizer }) => {
     return(
         <div className = { [styles.colL3, styles.colM3, styles.colS4, styles.colXS6, styles.centerContent].join(' ') }>
-            <OrganizerCard 
+            <OrganizerCard
                 { ...organizer }
             />
         </div>
@@ -159,10 +159,6 @@ const Organizers = () => {
 
     return(
         <div className = { styles.TeamOrganizer } >
-            <div className = { styles.header } >
-                <img src = 'http://www.ihsig.com/media-intestinal-health-ihsig/ihsig767-1200x1200mm-1024x505.png' />
-            </div>
-
             <div className = { styles.TeamContainer }>
                 <div className = { styles.titleContainer }>
                     <h3>EQUIPO ORGANIZADOR</h3>
@@ -173,7 +169,7 @@ const Organizers = () => {
                 <div className = { styles.Row }>
                     {
                         organizers.map((organizer, i) =>
-                            <OrganizerColumn 
+                            <OrganizerColumn
                                 key = { i }
                                 { ...organizer }
                             />

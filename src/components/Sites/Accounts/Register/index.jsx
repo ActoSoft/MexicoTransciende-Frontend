@@ -25,27 +25,25 @@ export default class Register extends Component {
 
     render () {
 
-        const genderMenu = (
-            <Menu onClick={(e) => this.handleChange('gender', e.item.props.children)}>
-                <Menu.Item key={1}>Masculino</Menu.Item>
-                <Menu.Item key={2}>Femenino</Menu.Item>
-                <Menu.Item key={3}>Prefiero no decir</Menu.Item>
+        const genderMenu = 
+            <Menu onClick = { (e) => this.handleChange('gender', e.item.props.children) }>
+                <Menu.Item key = { 1 }>Masculino</Menu.Item>
+                <Menu.Item key = { 2 }>Femenino</Menu.Item>
+                <Menu.Item key = { 3 }>Prefiero no decir</Menu.Item>
             </Menu>
-        )
         
-        const roleMenu = (
-            <Menu onClick={(e) => this.handleChange('role', e.item.props.children)}>
-                <Menu.Item key={4}>Administrador</Menu.Item>
-                <Menu.Item key={5}>Miembro Organizador</Menu.Item>
-                <Menu.Item key={6}>Vendedor</Menu.Item>
-                <Menu.Item key={7}>Invitado</Menu.Item>
+        const roleMenu =
+            <Menu onClick = { (e) => this.handleChange('role', e.item.props.children) }>
+                <Menu.Item key = { 4 }>Administrador</Menu.Item>
+                <Menu.Item key = { 5 }>Miembro Organizador</Menu.Item>
+                <Menu.Item key = { 6 }>Vendedor</Menu.Item>
+                <Menu.Item key = { 7 }>Invitado</Menu.Item>
             </Menu>
-        )
 
         return (
             <Layout className = 'layout'>
                 <Content className = 'content'>
-                <p className = 'register-title'>Registrate</p>
+                    <p className = 'register-title'>Registrate</p>
                     <Input
                         placeholder = 'Nombre'
                         className = 'register-input-name'
@@ -61,7 +59,7 @@ export default class Register extends Component {
                         onChange = { (e) => this.handleChange(e.target.name, e.target.value) }
                     />
                     <Input
-                        type="number"
+                        type = 'number'
                         placeholder = 'Teléfono'
                         className = 'register-input-phone'
                         name = 'phone'
@@ -69,7 +67,7 @@ export default class Register extends Component {
                         onChange = { (e) => this.handleChange(e.target.name, e.target.value) }
                     />
                     <Input
-                        type="number"
+                        type = 'number'
                         placeholder = 'Edad'
                         className = 'register-input-age'
                         name = 'age'
@@ -83,16 +81,16 @@ export default class Register extends Component {
                         value = { this.state.address }
                         onChange = { (e) => this.handleChange(e.target.name, e.target.value) }
                     />
-                    <Dropdown trigger={['click']} overlay={genderMenu}>
+                    <Dropdown trigger = { ['click'] } overlay = { genderMenu }>
                         <Button>
                             <span>{this.state.gender ? this.state.gender : 'Género' }</span>
-                            <Icon type="down" />
+                            <Icon type = 'down' />
                         </Button>
                     </Dropdown>
-                    <Dropdown trigger={['click']} overlay={roleMenu}>
+                    <Dropdown trigger = { ['click'] } overlay = { roleMenu }>
                         <Button>
                             <span>{this.state.role ? this.state.role : 'Rol'}</span>
-                            <Icon type="down" />
+                            <Icon type = 'down' />
                         </Button>
                     </Dropdown>
                     <Button
@@ -104,7 +102,7 @@ export default class Register extends Component {
                     </Button>
 
                     <p>
-                        ¿Ya tienes una cuenta? Haz click <a href="/login">aquí</a> para iniciar sesión
+                        ¿Ya tienes una cuenta? Haz click <a href = '/login'>aquí</a> para iniciar sesión
                     </p>
                 </Content>
             </Layout>

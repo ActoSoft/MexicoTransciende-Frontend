@@ -16,6 +16,7 @@ import organizer13 from '../../../images/organizer_13.jpg'
 import organizer14 from '../../../images/organizer_14.jpg'
 import organizer15 from '../../../images/organizer_15.jpg'
 import organizer16 from '../../../images/organizer_16.jpg'
+import { ReactComponent as Instagram } from '../../../images/icons/instagram.svg'
 
 /**
  * Team organizer displays information about the organizer :p
@@ -40,9 +41,14 @@ const OrganizerCard = ({ avatar, name, role, bio, ...props }) => {
             <p className = { styles.cardRole } >
                 { role }
             </p>
-            <p className = { styles.cardBio } >
-                {bio}
-            </p>
+            <a href = { `https://instagram.com/${bio.split('@')[1]}` }>
+                <div className = { styles.instagram }>
+                    <Instagram className = { styles.instagramIcon } />
+                    <p className = { styles.cardBio } >
+                        {bio}
+                    </p>
+                </div>
+            </a>
         </div>
     )
 }
@@ -63,97 +69,97 @@ const Organizers = () => {
             avatar: organizer1,
             name: 'Juan Pablo Sánchez Delgadillo',
             role: 'Coordinador General',
-            bio: 'Instagram: @juanpsd'
+            bio: '@juanpsd'
         },
         {
             avatar: organizer2,
             name: 'Luis Felipe Islas Islas',
             role: 'Coordinador logística y equipo',
-            bio: 'Instagram: @filip233'
+            bio: '@filip233'
         },
         {
             avatar: organizer3,
             name: 'Raúl Briseño Lavalley',
             role: 'Coordinador de Escenario / Vicecoordinador general',
-            bio: 'Instagram: @_rulobr'
+            bio: '@_rulobr'
         },
         {
             avatar: organizer4,
             name: 'Rosa Eugenia Sandoval Cortés',
             role: 'Vicecoordinadora de escenario',
-            bio: 'Instagram: @rosa_sandovall'
+            bio: '@rosa_sandovall'
         },
         {
             avatar: organizer5,
             name: 'Karla Mijangos Blancas',
             role: 'Coordinadora de patrocinios',
-            bio: 'Instagram: @karlamijangosb'
+            bio: '@karlamijangosb'
         },
         {
             avatar: organizer6,
             name: 'Darsha Justine Ascencio Islas',
             role: 'Vicecoordinadora de patrocinios',
-            bio: 'Instagram: @darsh.asc'
+            bio: '@darsh.asc'
         },
         {
             avatar: organizer7,
             name: 'Viviana Luna Jiménez Machuca',
             role: 'Coordinadora de Conferencias',
-            bio: 'Instagram: @vivianlunaj'
+            bio: '@vivianlunaj'
         },
         {
             avatar: organizer8,
             name: 'Ana Karina Moreno Martínez',
             role: 'Vicecoordinadora de conferencias',
-            bio: 'Instagram: @anakarinamomtz'
+            bio: '@anakarinamomtz'
         },
         {
             avatar: organizer9,
             name: 'Silvia Paola Barrera Pérez',
             role: 'Coordinadora de Talleres y Masterclass',
-            bio: 'Instagram: @paobarrera65'
+            bio: '@paobarrera65'
         },
         {
             avatar: organizer10,
             name: 'Daniel Arrieta Moreno',
             role: 'Vicecoordinador de Talleres y Masterclass',
-            bio: 'Instagram: @daniel139904'
+            bio: '@daniel139904'
         },
         {
             avatar: organizer11,
             name: 'María Fernanda Covarrubias Ramírez',
             role: 'Coordinador de ventas',
-            bio: 'Instagram: @fer_cova'
+            bio: '@fer_cova'
         },
         {
             avatar: organizer12,
             name: 'Homero Adrián Pérez Pérez',
             role: 'Vicecoordinador de Ventas',
-            bio: 'Instagram: @homeroadrianp'
+            bio: '@homeroadrianp'
         },
         {
             avatar: organizer13,
             name: 'Mara Daniela Aguilar Orea',
             role: 'Coordinadora de Imagen',
-            bio: 'Instagram: @maradanielaaa'
+            bio: '@maradanielaaa'
         },
         {
             avatar: organizer14,
             name: 'Daniela Ortega Miranda',
             role: 'Vicecoordinadora de Imagen',
-            bio: 'Instagram: @danielaom_18'
+            bio: '@danielaom_18'
         },
         {
             avatar: organizer15,
             name: 'Dafne Abigail Carranza Maldonado',
             role: 'Coordinadora de Finanzas',
-            bio: 'Instagram: @dafnecarranza'
+            bio: '@dafnecarranza'
         },
         {
             avatar: organizer16,
             name: 'Carlos Uriel Santillan Mimila',
             role: 'Vicecoordinador de Finanzas',
-            bio: 'Instagram: @charly_10119'
+            bio: '@charly_10119'
         }
     ]
 

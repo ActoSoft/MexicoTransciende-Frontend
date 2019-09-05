@@ -21,16 +21,16 @@ class AboutUs extends Component {
 	        <div className = 'ui-about-container'>
                 <div className = 'ui-about-content-text'>
                     <div className = 'ui-about-text'>
-                        <label className = 'ui-about-text-tittle'>{this.state.about}</label>
-                        <label className = 'ui-about-text-content'>{this.state.content}</label>
+                        <p className = 'ui-about-text-tittle'>{this.state.about}</p>
+                        <p className = 'ui-about-text-content'>{this.state.content}</p>
                     </div>
                     <div className = 'ui-about-text'>
-                        <label className = 'ui-about-text-tittle'>{this.state.vision}</label>
-                        <label className = 'ui-about-text-content'>{this.state.contentVision}</label>
+                        <p className = 'ui-about-text-tittle'>{this.state.vision}</p>
+                        <p className = 'ui-about-text-content'>{this.state.contentVision}</p>
                     </div>
                     <div className = 'ui-about-text'>
-                        <label className = 'ui-about-text-tittle'>{this.state.mision}</label>
-                        <label className = 'ui-about-text-content'>{this.state.contentMision}</label>
+                        <p className = 'ui-about-text-tittle'>{this.state.mision}</p>
+                        <p className = 'ui-about-text-content'>{this.state.contentMision}</p>
                     </div>
                 </div>
 

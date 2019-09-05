@@ -8,6 +8,14 @@ $white: #FFFDF5;
 
 $black: #000;
 
+$brown: #DC783D;
+
+$salmon: #F26D64;
+
+$gold: #E48F1F;
+
+$skin: #EEAA87;
+
 $palette: (
   pink: (
     base: $pink,
@@ -31,6 +39,26 @@ $palette: (
   white: (
     base: $white,
     dark: darken($white, 15%),
+  ),
+  salmon: (
+    base: $salmon,
+    ligth: lighten($salmon, 15),
+    dark: darken($salmon, 15%),
+  ),
+  brown: (
+    base: $brown,
+    ligth: lighten($brown, 15),
+    dark: darken($brown, 15%),
+  ),
+  gold: (
+    base: $gold,
+    ligth: lighten($gold, 15),
+    dark: darken($gold, 15%),
+  ),
+  skin: (
+    base: $skin,
+    ligth: lighten($skin, 15),
+    dark: darken($skin, 15%),
   )
 );
 

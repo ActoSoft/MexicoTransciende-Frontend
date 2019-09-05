@@ -1,8 +1,13 @@
+@import "../../../partials/colors";
+
 .ui-about-container{
     max-width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
+    background-image: url('../../../images//skyline.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
     text-align: center;
 }
@@ -10,7 +15,7 @@
 .ui-about-content-text {
     width: 75vw;
     height: auto;
-    background: #B13B3C;
+    background: color(salmon, base);
     margin-left: auto;
     margin-right: auto;
     margin-top: 15vh;

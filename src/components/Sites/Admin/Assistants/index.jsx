@@ -8,12 +8,13 @@ const columns = [
     { title: 'Teléfono', value: 'phone' }
 ]
 
-const Assistants = () =>
+const Assistants = (props) =>
     <Fragment>
         <List
             getUrl = { getAllAssistants }
             columns = { columns }
             title = { 'Lista de Asistentes' }
+            { ...props }
         />
     </Fragment>
 

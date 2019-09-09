@@ -124,6 +124,7 @@ class List extends Component {
     render() {
         const suputamadre = this.generateColumns(this.columns)
         const { loaded, data } = this.state
+        console.log(this.props)
         return (
             <Row className = 'list-list'>
                 <Col span = { 24 }>
@@ -135,6 +136,10 @@ class List extends Component {
                     {
                         loaded  && suputamadre ?
                             <Table
+                                onRow = { record => ({
+                                    onClick: () =>
+                                        this.props.history.push(this.props.match.url + record._id)
+                                }) }
                                 columns = { suputamadre }
                                 dataSource = { data ? data : null }
                             />

@@ -142,7 +142,7 @@ class Register extends Component {
         return (
             <Layout className = 'layout'>
                 <Content className = 'content'>
-                    <p className = 'register-title'>Registrate</p>
+                    <p className = 'register-title'>Regístrate</p>
                     <Input
                         placeholder = 'Nombre'
                         className = 'register-input-name'
@@ -171,13 +171,6 @@ class Register extends Component {
                         className = 'register-input-age'
                         name = 'age'
                         value = { this.state.age }
-                        onChange = { (e) => this.handleChange(e.target.name, e.target.value) }
-                    />
-                    <Input
-                        placeholder = 'Dirección'
-                        className = 'register-input-address'
-                        name = 'address'
-                        value = { this.state.address }
                         onChange = { (e) => this.handleChange(e.target.name, e.target.value) }
                     />
                     <Dropdown trigger = { ['click'] } overlay = { genderMenu }>

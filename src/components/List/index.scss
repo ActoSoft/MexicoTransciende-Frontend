@@ -1,0 +1,78 @@
+@import "../../partials/colors";
+
+.list-list {
+    margin-top: 8vh;
+}
+
+.ant-table-column-has-actions {
+    width: 33% !important;
+}
+
+tr {
+    &:hover, &:active, &:focus {
+        td {
+            background-color: color(yellow, base, 0.2) !important;
+        }
+    }
+}
+
+.ant-table table, th {
+    text-align: center !important;
+}
+
+.ant-table-thead, th {
+    color: color(yellow, base) !important;
+    // color: white !important;
+}
+
+.anticon-search {
+    color: color(yellow, base) !important;
+}
+
+.list-title {
+    margin: 0 !important;
+    font-size: 2em;
+    color: color(salmon, base);
+    text-align: center;
+}
+
+.ant-table-filter-dropdown {
+    .ant-input {
+        &:hover, &:active, &:focus {
+            border-color: color(salmon, base) !important;
+            box-shadow: 0 0 0 2px color(yellow, base, 0.5) !important;
+        }
+    }
+    .ant-btn-primary {
+        background-color: color(salmon, base) !important;
+        border: none;
+        &:hover {
+            color: color(white, base) !important;
+        }
+    }
+    button {
+        &:hover, &:active, &:focus {
+            border-color: color(salmon, base) !important;
+            color: color(salmon, base) !important;
+        }
+    }
+}
+
+.ant-pagination-item-active,
+.ant-pagination-item:hover {
+    a {
+        color: color(salmon, base) !important;
+    }
+    border-color: color(salmon, base) !important;
+}
+
+.ant-pagination-prev, .ant-pagination-next {
+    &:hover {
+        .ant-pagination-item-link {
+            border-color: color(salmon, base) !important;
+        }
+        .anticon-left, .anticon-right {
+            color: color(salmon, base) !important;
+        }
+    }
+}

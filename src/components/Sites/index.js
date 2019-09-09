@@ -8,8 +8,8 @@ import Login from './Accounts/Login'
 import Register from './Accounts/Register'
 import ContactForm from './ContactForm/'
 import Organizers from './TeamOrganizer'
-
 import Dashboard from './Admin/Dashboard'
+import Assistants from './Admin/Assistants'
 
 export {
     Landing,
@@ -22,5 +22,6 @@ export {
     Dashboard,
     Register,
     ContactForm,
-    Organizers
+    Organizers,
+    Assistants
 }

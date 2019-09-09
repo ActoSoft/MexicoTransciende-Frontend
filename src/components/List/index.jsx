@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Table, Input, Button, Icon, Skeleton } from 'antd'
+import { Row, Col, Table, Input, Button, Icon, Skeleton } from 'antd'
 import { withAuth } from '../../auth'
 import Highlighter from 'react-highlight-words'
 import axios from 'axios'
@@ -14,9 +14,10 @@ class List extends Component {
         this.state = {
             loaded: false,
             data: null
-        },
-        this.getUrl = this.props.getUrl,
-        this.headers = this.props.auth.getHeaderAuthToken
+        }
+        this.getUrl = this.props.getUrl
+        this.headers = this.props.auth.getHeaderAuthToken()
+        this.columns = this.props.columns
     }
 
     getData = async() => {
@@ -35,8 +36,8 @@ class List extends Component {
         }
     }
 
-    componentDidMount = () => {
-        this.getData()
+    componentDidMount = async () => {
+        await this.getData()
     }
 
     getColumnSearchProps = (dataIndex) => ({
@@ -108,31 +109,41 @@ class List extends Component {
 
     generateColumns = (columns) => {
         const columnsAnt = columns.map(column => {
-            return {
+            let object = {
                 title: column.title,
                 dataIndex: column.value,
                 key: column.value,
+                width: 1000,
                 ...this.getColumnSearchProps(column.value)
             }
+            return object
         })
+        console.log(columnsAnt)
+        console.log('caca')
         return columnsAnt
     }
 
     render() {
-        const { columns } = this.props
+        const suputamadre = this.generateColumns(this.columns)
         const { loaded, data } = this.state
+        console.log('peo')
         return (
-            <div>
-                {
-                    loaded ?
-                        <Table
-                            columns = { this.generateColumns(columns) }
-                            dataSource = { data ? data : null }
-                        />
-                        :
-                        <Skeleton active />
-                }
-            </div>
+            <Row className = 'list-list'>
+                <Col span = { 24 }>
+                    <p className = 'list-title'>Lista de Asistentes</p>
+                </Col>
+                <Col span = { 24 }>
+                    {
+                        loaded  && suputamadre ?
+                            <Table
+                                columns = { suputamadre }
+                                dataSource = { data ? data : null }
+                            />
+                            :
+                            <Skeleton active />
+                    }
+                </Col>
+            </Row>
         )
     }
 

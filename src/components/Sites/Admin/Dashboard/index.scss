@@ -2,11 +2,30 @@
 
 .layout {
     background-color: rgb(248, 249, 250) !important;
+    .header {
+        width: 80%;
+        background-color: color(salmon, base);
+        .ant-menu {
+            background-color: color(salmon, base);
+            .ant-menu-item {
+                a {
+                    color: color(white, base);
+                }
+            }
+
+            .ant-menu-item-active, .ant-menu-item-selected {
+                a {
+                    color: color(red, base);
+                }
+                border-bottom-color: color(red, base);
+            }
+        }
+    }
 }
 .dashboard-content {
     min-width: 300px !important;
     width: 80%;
-    min-height: 80vh;
+    min-height: 80vh !important;
     padding: 2vh 5vw !important;
     border-radius: 5px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);

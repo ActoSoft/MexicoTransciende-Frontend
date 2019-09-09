@@ -15,6 +15,10 @@ const Dashboard = ({auth}) => {
                     name: 'Registar asistente',
                     url: '/register'
                 },
+                {
+                    name: 'Ver asistentes',
+                    url: '/assistants/'
+                }
             ]
         }
     ]

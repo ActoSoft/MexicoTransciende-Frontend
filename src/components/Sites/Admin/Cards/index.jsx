@@ -1,8 +1,27 @@
 import React, { Fragment } from 'react'
 import { Icon, Row, Col } from 'antd'
 import { Link } from 'react-router-dom'
+import { withAuth } from '../../../../auth/'
+import { DASHBOARD } from '../../../../utils/routes'
 
-const CardsDashboard = ({cards, auth}) =>
+const cards = [
+    {
+        icon: 'user',
+        title: 'Asistentes al evento',
+        actions: [
+            {
+                name: 'Registar asistente',
+                url: `${DASHBOARD}/register/`
+            },
+            {
+                name: 'Ver asistentes',
+                url: `${DASHBOARD}/assistants/`
+            }
+        ]
+    }
+]
+
+const CardsDashboard = ({auth}) =>
     <Fragment>
         <p className = 'dashboard-title'>
             Hola, {auth.name}!
@@ -51,4 +70,4 @@ const DashboardCard = ({card}) => {
     )
 }
 
-export default CardsDashboard
+export default withAuth(CardsDashboard)

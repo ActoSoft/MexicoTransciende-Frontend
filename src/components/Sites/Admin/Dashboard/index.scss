@@ -6,8 +6,8 @@
 .dashboard-content {
     min-width: 300px !important;
     width: 80%;
-    height: 80vh;
-    padding: 2vh 0 !important;
+    min-height: 80vh;
+    padding: 2vh 5vw !important;
     border-radius: 5px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     display: flex;

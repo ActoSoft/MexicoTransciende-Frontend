@@ -14,7 +14,8 @@ import {
     Login,
     Dashboard,
     Register,
-    Assistants
+    Assistants,
+    CardsDashboard
 } from '../components/Sites'
 
 const Routes = () =>
@@ -22,10 +23,18 @@ const Routes = () =>
         <Switch>
             <Route exact path = { ROOT } component = { Landing } />
             <Route exact path = { LOGIN } component = { Login } />
-            <PrivateRoute exact path = { DASHBOARD } component = { Dashboard } />
-            <PrivateRoute exact path = { REGISTER } component = { Register } />
-            <PrivateRoute exact path = { ASSISTANTS } component = { Assistants } />
+            <PrivateRoute path = { DASHBOARD } component = { Dashboard } />
         </Switch>
     </Fragment>
 
-export default Routes
+const AdminRoutes = () =>{
+    return(
+        <Switch>
+            <PrivateRoute exact path = { DASHBOARD } component = { CardsDashboard } />
+            <Route path = { DASHBOARD + REGISTER } component = { Register } />
+            <Route path = { DASHBOARD + ASSISTANTS } component = { Assistants } />
+        </Switch>
+    )
+}
+
+export { Routes, AdminRoutes }

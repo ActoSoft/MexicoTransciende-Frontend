@@ -140,7 +140,7 @@ class Register extends Component {
             </Menu>
 
         return (
-            <Layout className = 'layout'>
+            <Layout className = 'layout-register'>
                 <Content className = 'content'>
                     <p className = 'register-title'>Regístrate</p>
                     <Input

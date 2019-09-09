@@ -10,6 +10,7 @@ import ContactForm from './ContactForm/'
 import Organizers from './TeamOrganizer'
 import Dashboard from './Admin/Dashboard'
 import Assistants from './Admin/Assistants'
+import CardsDashboard from './Admin/Cards'
 
 export {
     Landing,
@@ -23,5 +24,6 @@ export {
     Register,
     ContactForm,
     Organizers,
-    Assistants
+    Assistants,
+    CardsDashboard
 }

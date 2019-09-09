@@ -13,6 +13,7 @@ const Assistants = () =>
         <List
             getUrl = { getAllAssistants }
             columns = { columns }
+            title = { 'Lista de Asistentes' }
         />
     </Fragment>
 

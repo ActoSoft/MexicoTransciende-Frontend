@@ -118,19 +118,18 @@ class List extends Component {
             }
             return object
         })
-        console.log(columnsAnt)
-        console.log('caca')
         return columnsAnt
     }
 
     render() {
         const suputamadre = this.generateColumns(this.columns)
         const { loaded, data } = this.state
-        console.log('peo')
         return (
             <Row className = 'list-list'>
                 <Col span = { 24 }>
-                    <p className = 'list-title'>Lista de Asistentes</p>
+                    <p className = 'list-title'>
+                        { this.props.title }
+                    </p>
                 </Col>
                 <Col span = { 24 }>
                     {
